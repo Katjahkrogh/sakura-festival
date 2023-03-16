@@ -1,43 +1,79 @@
 ---
-
 ---
 
 <article>
-    <img src="" alt="">
+  <img src="../images/boder/animerch.png" alt="" />
+  <div>
     <h3>Wadaiko</h3>
-    <h3> &#8594;</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+    <h3 class="arrow">&#8594;</h3>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
 </article>
 
 <style>
-     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    article{
-        width: 310px;
-        height: max-content;
-    }
-    
-    img{
-        width: 267px;
-        height: 216px;
-        left: 0px;
-        overflow: hidden;
-    }
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap");
 
-    h3{
-        font-family: "Poppins", sans-serif;
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 45px;
-        letter-spacing: 0em;
-        /* text-align: left; */
-    }
-    p{ 
-        font-family: "Poppins", sans-serif;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 23px;
-        letter-spacing: 0em;
-        text-align: left;
-    }
+  :root {
+    --black: #000000;
+    --brown: #5f2a0d;
+    --red-dark: #79241f;
+    --red-medium: #b43830;
+    --red-light: #d2625a;
+    --beige-dark: #e2d5c3;
+    --beige-medium: #f6f1e9;
+    --beige-light: #f5f5f5;
+    --pink-medium: #e8d0ce;
+    --pink-light: #f1e9e8;
+
+    --dropshadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  article {
+    width: 310px;
+    height: max-content;
+    margin: 20px 0;
+  }
+
+  img {
+    width: 267px;
+    height: 216px;
+    left: 0px;
+    overflow: hidden;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: var(--black);
+    padding: 49px 0 23px 0;
+  }
+  .arrow {
+    font-size: 50px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: var(--black);
+  }
 </style>
