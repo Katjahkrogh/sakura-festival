@@ -1,5 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Cards from "../components/Cards.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -11,6 +14,55 @@ import Footer from "../components/Footer.astro";
     <title>Program</title>
   </head>
   <body>
+    <Header />
+    <main>
+      <section class="button_section">
+        <!-- 
+        <Button>Saturday</Button>
+        <Button>Sunday</Button> 
+        -->
+      </section>
+      <section class="card_grid">
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+      </section>
+    </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--pink-light);
+  }
+
+  .button_section {
+    width: 100vw;
+    min-height: 100px;
+    background-color: var(--red-dark);
+
+    display: flex;
+    justify-content: space-around;
+  }
+  @media (min-width: 650px) {
+    .card_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5vw;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .card_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5vw;
+    }
+  }
+</style>
