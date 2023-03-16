@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+const { variant = "primary", size = "medium" } = Astro.props;
+---
+
+<button data-variant={variant} data-size={size}>
+  <slot />
+</button>
+<style>
+  button {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    padding: 1em;
+    box-shadow: var(--dropshadow);
+  }
+  /* 
+  --black: #000000;
+  --brown: #5f2a0d;
+  --red-dark: #79241f;
+  --red-medium: #b43830;
+  --red-light: #d2625a;
+  --beige-dark: #e2d5c3;
+  --beige-medium: #f6f1e9;
+  --beige-light: #f5f5f5;
+  --pink-medium: #e8d0ce;
+  --pink-light: #f1e9e8;
+
+  --dropshadow: 0px 1px 12px rgba(0, 0, 0, 0.25); 
+  */
+
+  /* sizes */
+  [data-size="desktop"] {
+    height: 65px;
+  }
+
+  [data-size="mobile"] {
+    width: 120px;
+    height: 33px;
+  }
+
+  /* Variants */
+  [data-variant="primary"] {
+    width: 242px;
+    height: 65px;
+    border-radius: 11px;
+  }
+
+  [data-variant="secondary"] {
+    width: 206px;
+    height: 69px;
+    border-radius: 50px;
+  }
+  /* colors */
+
+  [data-color="beige"] {
+    background-color: var(--beige-dark);
+    color: var(--brown);
+  }
+
+  [data-color="red"] {
+    background-color: var(--red-medium);
+    color: white;
+  }
+
+  [data-color="red"] {
+    background-color: var(--red-light);
+    color: var(--beige-dark);
+  }
+
+  .dark {
+    background-color: var(--red-dark);
+  }
+
+  .one-mobile {
+    background-color: var(--beige-dark);
+    color: var(--brown);
+  }
+
+  .two-mobile {
+    background-color: var(--red-medium);
+    color: white;
+  }
+
+  .three-mobile {
+    background-color: var(--red-light);
+    color: var(--beige-dark);
+  }
+</style>
