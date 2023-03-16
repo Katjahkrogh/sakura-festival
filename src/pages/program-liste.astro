@@ -42,6 +42,12 @@ import "../styles/global.css";
     background-color: var(--pink-light);
   }
 
+  .card_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5vw;
+  }
+
   .button_section {
     width: 100vw;
     min-height: 100px;
@@ -52,17 +58,7 @@ import "../styles/global.css";
   }
   @media (min-width: 650px) {
     .card_grid {
-      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5vw;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .card_grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5vw;
     }
   }
 </style>
