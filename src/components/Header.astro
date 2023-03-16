@@ -1,26 +1,152 @@
 ---
 ---
 
-<header>
-  <div id="baggrund_header">
-    <h1>Sakura festival</h1>
-  </div>
-  <div>
-    <h1>22.</h1>
-  </div>
-</header>
+<body>
+  <header>
+    <div></div>
+    <div id="baggrund_header">
+      <img src="/public/images/sakura-logo.svg" alt="logo" width="20%" />
+      <div id="nav_header">
+        <h1>22-23. APRIL 2023</h1>
 
+        <div class="hamburger">
+          <div>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <!-- <button class="hamburger">
+        <div class="bar"></div>
+      </button> -->
+      </div>
+    </div>
+    <div class="hejhej">
+      <nav class="menu">
+        <a href="/pages/program-liste.astro">Program</a>
+        <a href="#">Boder</a>
+        <a href="#">Tilmedning af boder, frivillige eller akiviteter</a>
+        <a href="/pages/about.astro">Om os</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+    // document.querySelector(".hamburger").addEventListener("click", () => {
+    //   document.querySelector(".menu").classList.toggle("expanded");
+    // });
+    window.onload = function () {
+      const menu_btn = document.querySelector(".hamburger");
+
+      const mobile_menu = document.querySelector(".menu");
+
+      menu_btn.addEventListener("click", function () {
+        menu_btn.classList.toggle("isactive");
+        mobile_menu.classList.toggle("isactive");
+      });
+    };
+  </script>
+</body>
 <style>
-  #baggrund_header {
-    background-color: #7c2d22;
-    /* background-image: url("/public/images/nav-about.svg");
-    background-repeat: no-repeat; */
+  header {
+    background-color: var(--red-dark);
     height: 40vw;
     width: 100%;
     margin-bottom: 3em;
   }
 
   #baggrund_header h1 {
-    margin-top: 5vw;
+    color: #e2d5c3;
+    font-family: "Poppins", sans-serif;
+    margin-right: 1em;
+    font-size: 3vw;
+    margin-top: 18px;
+  }
+
+  #baggrund_header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #nav_header {
+    display: flex;
+    padding: 1em;
+  }
+  .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 31%;
+    padding: 1em;
+    transition: 0.4s;
+    border-radius: 1em;
+    margin-left: 45em;
+    margin-top: 8em;
+    padding: 1em;
+    height: fit-content;
+
+    background-color: var(--beige-medium);
+  }
+  .menu.isactive {
+    left: 20vw;
+    width: 23%;
+  }
+
+  .menu a {
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
+    margin: 0 auto 16px;
+    color: black;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 2vw;
+    height: fit-content;
+  }
+  .menu a:hover {
+    border-bottom: 0.1vw solid black;
+    width: fit-content;
+  }
+
+  .hamburger,
+  .hamburger:after,
+  .hamburger:before {
+    height: 5px;
+    background-color: var(--beige-medium);
+    margin: 6px 0px;
+    transition: 0.4s;
+    content: "";
+    display: block;
+  }
+
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 45px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    align-self: self-start;
+    margin-top: 2vw;
+    height: 20px;
+  }
+  :root {
+    --black: #000000;
+    --brown: #5f2a0d;
+    --red-dark: #79241f;
+    --red-medium: #b43830;
+    --red-light: #d2625a;
+    --beige-dark: #e2d5c3;
+    --beige-medium: #f6f1e9;
+    --beige-light: #f5f5f5;
+    --pink-medium: #e8d0ce;
+    --pink-light: #f1e9e8;
+  }
+
+  @media (max-width: 960px) {
+    #baggrund_header img {
+      margin-bottom: 3em;
+    }
   }
 </style>
