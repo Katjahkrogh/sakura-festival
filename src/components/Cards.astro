@@ -1,0 +1,107 @@
+---
+---
+
+<article>
+  <div class="img_container"><img src="../images/boder/animerch.png" alt="" /></div>
+  <div class="overskrift">
+    <h3>Wadaiko</h3>
+    <h3 class="arrow">&#8594;</h3>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+</article>
+
+<style>
+  /* -----–––––– skal ind i generel og fjernes her ––-––––––––– */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap");
+
+  :root {
+    --black: #000000;
+    --brown: #5f2a0d;
+    --red-dark: #79241f;
+    --red-medium: #b43830;
+    --red-light: #d2625a;
+    --beige-dark: #e2d5c3;
+    --beige-medium: #f6f1e9;
+    --beige-light: #f5f5f5;
+    --pink-medium: #e8d0ce;
+    --pink-light: #f1e9e8;
+
+    --dropshadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+  }
+  /* -----––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––– */
+
+  article {
+    width: 310px;
+    height: max-content;
+    margin: 20px 0;
+  }
+
+  img {
+    width: 267px;
+    height: 216px;
+    left: 0px;
+    overflow: hidden;
+  }
+
+  .overskrift {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: var(--black);
+    padding: 49px 0 23px 0;
+  }
+  .arrow {
+    font-size: 50px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: var(--black);
+    max-width: 500px;
+  }
+
+  @media (min-width: 1200px) {
+    article {
+      width: 500px;
+      height: 750px;
+    }
+    img {
+      aspect-ratio: 3/2;
+      width: 100%;
+      height: auto;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    article {
+      width: 600px;
+      height: 750px;
+    }
+  }
+</style>
