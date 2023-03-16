@@ -2,8 +2,8 @@
 ---
 
 <article>
-  <img src="../images/boder/animerch.png" alt="" />
-  <div>
+  <div class="img_container"><img src="../images/boder/animerch.png" alt="" /></div>
+  <div class="overskrift">
     <h3>Wadaiko</h3>
     <h3 class="arrow">&#8594;</h3>
   </div>
@@ -11,6 +11,7 @@
 </article>
 
 <style>
+  /* -----–––––– skal ind i generel og fjernes her ––-––––––––– */
   * {
     margin: 0;
     padding: 0;
@@ -33,6 +34,7 @@
 
     --dropshadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
   }
+  /* -----––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––– */
 
   article {
     width: 310px;
@@ -47,7 +49,7 @@
     overflow: hidden;
   }
 
-  div {
+  .overskrift {
     display: flex;
     justify-content: space-between;
   }
@@ -75,5 +77,31 @@
     text-align: left;
 
     color: var(--black);
+    max-width: 500px;
+  }
+
+  @media (min-width: 1200px) {
+    article {
+      width: 500px;
+      height: 750px;
+    }
+    img {
+      aspect-ratio: 3/2;
+      width: 100%;
+      height: auto;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    article {
+      width: 600px;
+      height: 750px;
+    }
   }
 </style>
