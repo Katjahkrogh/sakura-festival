@@ -1,16 +1,86 @@
 ---
 import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="../images/SakuraCPH-logo.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Singleview</title>
   </head>
   <body>
+    <header></header>
+    <main>
+      <article>
+        <section class="headline">
+          <h1 class="name1">Headline</h1>
+          <h2 class="name2">三味線</h2>
+          <img src="../images/aktiviteter/fløjte.png" alt="fløjte" />
+        </section>
+        <section class="text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            ullamcorper commodo porttitor. Maecenas at quam malesuada, dictum
+            nisi in, lacinia nulla. Vestibulum ornare quam mi, sed euismod quam
+            scelerisque a. Cras sit amet lorem nulla. In porta ornare nisi.
+            Curabitur congue enim ut ex venenatis auctor.
+          </p>
+          <p>
+            Vestibulum at lacus lorem. Aenean et consequat velit, vitae aliquet
+            risus. Fusce eleifend lacus interdum, ornare ligula at, molestie
+            justo. Donec eros massa,
+          </p>
+        </section>
+      </article>
+    </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  /* extra light = 200, light = 300, regular = 400, medium = 500, semi-bold = 600, bold = 700 */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+  body {
+    background-color: #e2d5c3;
+  }
+
+  main {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+  }
+  .headline {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .name1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    color: #dbcbb7;
+  }
+
+  .name2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #fd767b;
+  }
+
+  img {
+    margin-top: 10%;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 0.15em;
+    max-width: 600px;
+  }
+</style>
