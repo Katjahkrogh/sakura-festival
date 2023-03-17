@@ -31,7 +31,7 @@ const data = await response.json();
       <section class="button_section">
         <Button title="Saturday" variant="day" size="desktop" theclass="saturday" />
         <Button title="Sunday" variant="day" size="desktop" theclass="sunday" />
-        <Button title="All" variant="day" size="desktop" theclass="All" />
+        <Button title="all" variant="day" size="desktop" theclass="all" />
       </section>
       <section class="card_grid">
         {data.map((event) => <Card navn={event.event} billede={`../images/aktiviteter/${event.billede}`} link={"/events/" + event.id} beskrivelse={event.beskrivelse} japansk={event.japansk_tegn} day={event.day} />)}
@@ -45,27 +45,28 @@ const data = await response.json();
   console.log("script");
   document.querySelector(".saturday").addEventListener("click", dayClick);
   document.querySelector(".sunday").addEventListener("click", dayClick);
+  document.querySelector(".all").addEventListener("click", dayClick);
 
   function dayClick(evt) {
     const filter = evt.target.dataset.day;
     console.log("day click", filter);
 
     document.querySelectorAll(".theCard").forEach((card) => {
-      // console.log(card.classList.contains(filter));
       if (filter === "saturday") {
         if (card.classList.contains("sunday")) {
-          card.style.display = "none";
+          card.classList.add("hide");
+        } else {
+          card.classList.remove("hide");
         }
       } else if (filter === "sunday") {
         if (card.classList.contains("saturday")) {
-          card.style.display = "none";
+          card.classList.add("hide");
+        } else {
+          card.classList.remove("hide");
         }
+      } else {
+        card.classList.remove("hide");
       }
-      // else {
-      //   console.log("ALLL LALLALALALLA");
-      //   card.style.display = "block";
-      // }
-      // ret her, så man får alle cards frem, når man klikker på all-knappen
     });
   }
 </script>
@@ -97,9 +98,5 @@ const data = await response.json();
     .card_grid {
       grid-template-columns: 1fr 1fr;
     }
-  }
-
-  .hide {
-    display: none;
   }
 </style>
