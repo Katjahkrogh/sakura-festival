@@ -1,11 +1,11 @@
 ---
 import "../styles/global.css";
-const { variant = "primary", size = "medium" } = Astro.props;
-const { title } = Astro.props;
+
+const { title, variant, size, theclass } = Astro.props;
 ---
 
-<button data-variant={variant} data-size={size}>
-  <a href={}>{title}</a>
+<button class={theclass} data-day={theclass} data-variant={variant} data-size={size}>
+  {title}
 </button>
 
 <style>

@@ -1,10 +1,10 @@
 ---
 import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
 import "../styles/global.css";
-const { navn, billede, link, beskrivelse, japansk } = Astro.props;
+const { navn, billede, link, beskrivelse, japansk, day } = Astro.props;
 ---
 
-<article>
+<article class={"theCard " + day}>
   <a href={link} target="blank"
     ><div class="img_container">
       <img src={billede} alt="billede" />
