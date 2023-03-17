@@ -1,16 +1,25 @@
 ---
+import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
 import "../styles/global.css";
+const { navn, billede, link, beskrivelse, japansk } = Astro.props;
 ---
 
 <article>
-  <a href="#" target="blank"><div class="img_container"><img src="../images/boder/animerch.png" alt="" /></div></a>
-  <a href="#" target="blank">
+  <a href={link} target="blank"
+    ><div class="img_container">
+      <img src={billede} alt="billede" />
+    </div></a
+  >
+  <a href={link} target="blank">
     <section>
       <div class="overskrift">
-        <h3>Wadaiko</h3>
+        <h3>{navn}</h3>
         <h3 class="arrow">&#8594;</h3>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+      <h3>{japansk}</h3>
+      <p>
+        {beskrivelse}
+      </p>
     </section>
   </a>
 </article>
