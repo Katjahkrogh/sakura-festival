@@ -1,20 +1,21 @@
 ---
 import "../styles/global.css";
 const { variant = "primary", size = "medium" } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <button data-variant={variant} data-size={size}>
-  <slot />
+  <a href={}>{title}</a>
 </button>
+
 <style>
   button {
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
+    border: none;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+  }
 
-    padding: 1em;
-    box-shadow: var(--dropshadow);
+  button:hover {
+    transform: scale(0.9);
   }
   /* 
   --black: #000000;
@@ -33,59 +34,47 @@ const { variant = "primary", size = "medium" } = Astro.props;
 
   /* sizes */
   [data-size="desktop"] {
+    font-size: 20px;
     height: 65px;
   }
 
   [data-size="mobile"] {
     width: 120px;
     height: 33px;
+    font-size: 10px;
   }
 
   /* Variants */
-  [data-variant="primary"] {
-    width: 242px;
-    height: 65px;
+  [data-variant="program"] {
+    width: 262px;
     border-radius: 11px;
+    background-color: var(--beige-dark);
+    color: var(--brown);
   }
 
-  [data-variant="secondary"] {
+  [data-variant="download"] {
+    width: 262px;
+    border-radius: 11px;
+    background-color: var(--red-medium);
+    color: white;
+  }
+  [data-variant="day"] {
     width: 206px;
-    height: 69px;
     border-radius: 50px;
-  }
-  /* colors */
-
-  [data-color="beige"] {
-    background-color: var(--beige-dark);
-    color: var(--brown);
-  }
-
-  [data-color="red"] {
-    background-color: var(--red-medium);
-    color: white;
-  }
-
-  [data-color="red"] {
     background-color: var(--red-light);
     color: var(--beige-dark);
   }
 
-  .dark {
-    background-color: var(--red-dark);
-  }
-
-  .one-mobile {
-    background-color: var(--beige-dark);
-    color: var(--brown);
-  }
-
-  .two-mobile {
+  [data-variant="day-chosen"] {
+    width: 206px;
+    border-radius: 50px;
     background-color: var(--red-medium);
-    color: white;
+    color: var(--beige-dark);
   }
 
-  .three-mobile {
-    background-color: var(--red-light);
-    color: var(--beige-dark);
+  a {
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.15em;
   }
 </style>

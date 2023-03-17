@@ -3,6 +3,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Cards from "../components/Cards.astro";
 import "../styles/global.css";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="en">
@@ -17,10 +18,8 @@ import "../styles/global.css";
     <Header />
     <main>
       <section class="button_section">
-        <!-- 
-        <Button>Saturday</Button>
-        <Button>Sunday</Button> 
-        -->
+        <Button title="Saturday" variant="day" size="desktop" />
+        <Button title="Sunday" variant="day-chosen" size="desktop" />
       </section>
       <section class="card_grid">
         <Cards />
@@ -54,7 +53,7 @@ import "../styles/global.css";
     background-color: var(--red-dark);
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
   @media (min-width: 650px) {
