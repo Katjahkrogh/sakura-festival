@@ -62,11 +62,6 @@ const { title, variant, size, theclass } = Astro.props;
     color: var(--beige-dark);
   }
 
-  .active {
-    background-color: var(--red-medium);
-    font-weight: 900;
-  }
-
   @media (min-width: 400px) {
     button {
       width: 120px;
@@ -103,6 +98,11 @@ const { title, variant, size, theclass } = Astro.props;
       background-color: var(--red-light);
       color: var(--beige-dark);
       margin: 40px 0;
+    }
+
+    .active {
+      background-color: var(--red-medium);
+      font-weight: 900;
     }
   }
 </style>
