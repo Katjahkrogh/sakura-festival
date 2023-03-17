@@ -38,7 +38,7 @@ const data = await response.json();
           data.map((event) => (
             <Card
               navn={event.event}
-              billede={`/images/aktiviteter${event.billede}`}
+              billede={`../images/aktiviteter/${event.billede}`}
               link={"/events/" + event.id}
               beskrivelse={event.beskrivelse}
               japansk={event.japansk_tegn}
