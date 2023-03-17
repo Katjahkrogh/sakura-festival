@@ -13,6 +13,7 @@
           <div>
             <span class="line"></span>
             <span class="line"></span>
+            <span class="line"></span>
           </div>
         </div>
         <!-- <button class="hamburger">
@@ -48,7 +49,7 @@
 <style>
   header {
     background-color: var(--red-dark);
-    height: 40vw;
+    height: 50vw;
     width: 100%;
     margin-bottom: 3em;
   }
@@ -83,7 +84,6 @@
     margin-top: 8em;
     padding: 1em;
     height: fit-content;
-
     background-color: var(--beige-medium);
   }
   .menu.isactive {
@@ -103,8 +103,7 @@
     height: fit-content;
   }
   .menu a:hover {
-    border-bottom: 0.1vw solid black;
-    width: fit-content;
+    background-color: var(--beige-dark);
   }
 
   .hamburger,
@@ -116,6 +115,7 @@
     transition: 0.4s;
     content: "";
     display: block;
+    overflow: initial;
   }
 
   .hamburger {
