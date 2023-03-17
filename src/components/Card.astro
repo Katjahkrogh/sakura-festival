@@ -1,7 +1,7 @@
 ---
 import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
 import "../styles/global.css";
-const { navn, billede, link } = Astro.props;
+const { navn, billede, link, beskrivelse, japansk } = Astro.props;
 ---
 
 <article>
@@ -10,15 +10,15 @@ const { navn, billede, link } = Astro.props;
       <img src={billede} alt="billede" />
     </div></a
   >
-  <a href="#" target="blank">
+  <a href={link} target="blank">
     <section>
       <div class="overskrift">
         <h3>{navn}</h3>
         <h3 class="arrow">&#8594;</h3>
       </div>
+      <h3>{japansk}</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore
+        {beskrivelse}
       </p>
     </section>
   </a>
