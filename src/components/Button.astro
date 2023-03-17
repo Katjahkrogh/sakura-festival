@@ -33,53 +33,76 @@ const { title, variant, size, theclass } = Astro.props;
   */
 
   /* sizes */
-  [data-size="desktop"] {
-    font-size: 20px;
-    height: 65px;
-  }
 
-  [data-size="mobile"] {
-    width: 120px;
+  button {
+    width: 80px;
     height: 33px;
+
     font-size: 10px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.15em;
   }
 
   /* Variants */
   [data-variant="program"] {
-    width: 262px;
     border-radius: 11px;
     background-color: var(--beige-dark);
     color: var(--brown);
   }
 
   [data-variant="download"] {
-    width: 262px;
     border-radius: 11px;
     background-color: var(--red-medium);
     color: white;
   }
   [data-variant="day"] {
-    width: 206px;
     border-radius: 50px;
     background-color: var(--red-light);
     color: var(--beige-dark);
   }
 
-  [data-variant="day-chosen"] {
-    width: 206px;
-    border-radius: 50px;
-    background-color: var(--red-medium);
-    color: var(--beige-dark);
-  }
-
-  a {
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 0.15em;
-  }
-
   .active {
     background-color: var(--red-medium);
     font-weight: 900;
+  }
+
+  @media (min-width: 400px) {
+    button {
+      width: 120px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    button {
+      height: 50px;
+      width: 150px;
+    }
+  }
+  @media (min-width: 900px) {
+    button {
+      font-size: 20px;
+    }
+
+    [data-variant="program"] {
+      width: 262px;
+      border-radius: 11px;
+      background-color: var(--beige-dark);
+      color: var(--brown);
+    }
+
+    [data-variant="download"] {
+      width: 262px;
+      border-radius: 11px;
+      background-color: var(--red-medium);
+      color: white;
+    }
+    [data-variant="day"] {
+      width: 206px;
+      border-radius: 50px;
+      background-color: var(--red-light);
+      color: var(--beige-dark);
+      margin: 40px 0;
+    }
   }
 </style>
