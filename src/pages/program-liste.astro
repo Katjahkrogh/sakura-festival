@@ -31,7 +31,7 @@ const data = await response.json();
       <section class="button_section">
         <Button title="Saturday" variant="day" size="desktop" theclass="saturday" />
         <Button title="Sunday" variant="day" size="desktop" theclass="sunday" />
-        <Button title="all" variant="day" size="desktop" theclass="all" />
+        <Button title="all" variant="day" size="desktop" theclass="all" class="active" />
       </section>
       <section class="card_grid">
         {data.map((event) => <Card navn={event.event} billede={`../images/aktiviteter/${event.billede}`} link={"/events/" + event.id} beskrivelse={event.beskrivelse} japansk={event.japansk_tegn} day={event.day} />)}
@@ -53,18 +53,30 @@ const data = await response.json();
 
     document.querySelectorAll(".theCard").forEach((card) => {
       if (filter === "saturday") {
+        document.querySelector(".saturday").classList.add("active");
+        document.querySelector(".all").classList.remove("active");
+        document.querySelector(".sunday").classList.remove("active");
+        // forsøg med at få knappen til at skifte farve med .active
+
         if (card.classList.contains("sunday")) {
           card.classList.add("hide");
         } else {
           card.classList.remove("hide");
         }
       } else if (filter === "sunday") {
+        document.querySelector(".sunday").classList.add("active");
+        document.querySelector(".saturday").classList.remove("active");
+        document.querySelector(".all").classList.remove("active");
+
         if (card.classList.contains("saturday")) {
           card.classList.add("hide");
         } else {
           card.classList.remove("hide");
         }
       } else {
+        document.querySelector(".sunday").classList.remove("active");
+        document.querySelector(".saturday").classList.remove("active");
+        document.querySelector(".all").classList.add("active");
         card.classList.remove("hide");
       }
     });
