@@ -14,7 +14,7 @@ const { navn, billede, link, beskrivelse, japansk, day } = Astro.props;
     <section>
       <div class="overskrift">
         <h3>{navn}</h3>
-        <h3 class="arrow">&#8594;</h3>
+        <a href="program-singleview"><h3 class="arrow">&#8594;</h3></a>
       </div>
       <h3>{japansk}</h3>
       <p>
@@ -29,6 +29,7 @@ const { navn, billede, link, beskrivelse, japansk, day } = Astro.props;
     width: 310px;
     height: max-content;
     margin: 20px 0;
+    overflow: hidden;
   }
 
   img {
@@ -51,7 +52,7 @@ const { navn, billede, link, beskrivelse, japansk, day } = Astro.props;
     letter-spacing: 0em;
     text-align: left;
 
-    color: var(--black);
+    color: var(--red-dark);
     padding: 49px 0 23px 0;
   }
   .arrow {
@@ -64,6 +65,7 @@ const { navn, billede, link, beskrivelse, japansk, day } = Astro.props;
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
+    margin-top: -10%;
 
     color: var(--black);
     max-width: 500px;

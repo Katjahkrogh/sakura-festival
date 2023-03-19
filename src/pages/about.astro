@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -12,17 +13,15 @@ import "../styles/global.css";
     <title>About us</title>
   </head>
   <body>
-    <header>
-      <nav></nav>
-    </header>
-
+    <Header title="About us" title2="だいたい" />
     <main>
       <section class="front">
         <div>
-          <h1>About us</h1>
-        </div>
-        <div>
-          <img src="../images/about/bjerg.png" alt="bjerg" class="frontimg" />
+          <img
+            src="../images/about/paraply.jpeg"
+            alt="bjerg"
+            class="frontimg"
+          />
         </div>
       </section>
       <section class="mid">
@@ -86,12 +85,6 @@ import "../styles/global.css";
   body {
     background-color: #e2d5c3;
   }
-  h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 5rem;
-    color: #dbcbb7;
-  }
 
   .front {
     display: grid;
@@ -101,7 +94,7 @@ import "../styles/global.css";
   }
 
   .frontimg {
-    max-width: 100%;
+    max-width: 75%;
   }
   .mid {
     display: flex;

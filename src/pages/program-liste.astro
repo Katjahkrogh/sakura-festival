@@ -9,7 +9,8 @@ import { Debug } from "astro/components";
 const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/events";
 const options = {
   headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
   },
 };
 
@@ -26,15 +27,37 @@ const data = await response.json();
     <title>Program</title>
   </head>
   <body>
-    <Header />
+    <Header title="Program" title2="プログラム" />
     <main>
       <section class="button_section">
-        <Button title="Saturday" variant="day" size="desktop" theclass="saturday" />
+        <Button
+          title="Saturday"
+          variant="day"
+          size="desktop"
+          theclass="saturday"
+        />
         <Button title="Sunday" variant="day" size="desktop" theclass="sunday" />
-        <Button title="all" variant="day" size="desktop" theclass="all" class="active" />
+        <Button
+          title="all"
+          variant="day"
+          size="desktop"
+          theclass="all"
+          class="active"
+        />
       </section>
       <section class="card_grid">
-        {data.map((event) => <Card navn={event.event} billede={`../images/aktiviteter/${event.billede}`} link={"/events/" + event.id} beskrivelse={event.beskrivelse} japansk={event.japansk_tegn} day={event.day} />)}
+        {
+          data.map((event) => (
+            <Card
+              navn={event.event}
+              billede={`../images/aktiviteter/${event.billede}`}
+              link={"/events/" + event.id}
+              beskrivelse={event.beskrivelse}
+              japansk={event.japansk_tegn}
+              day={event.day}
+            />
+          ))
+        }
       </section>
     </main>
     <Footer />

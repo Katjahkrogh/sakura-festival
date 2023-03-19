@@ -1,4 +1,5 @@
 ---
+const { title, title2 } = Astro.props;
 ---
 
 <body>
@@ -22,12 +23,14 @@
     </div>
     <div class="hejhej">
       <nav class="menu">
-        <a href="/pages/program-liste.astro">Program</a>
+        <a href="program-liste">Program</a>
         <a href="#">Boder</a>
         <a href="#">Tilmedning af boder, frivillige eller akiviteter</a>
-        <a href="/pages/about.astro">Om os</a>
+        <a href="about">Om os</a>
       </nav>
     </div>
+    <h1>{title}</h1>
+    <h2>{title2}</h2>
   </header>
   <script>
     // document.querySelector(".hamburger").addEventListener("click", () => {
@@ -46,9 +49,24 @@
   </script>
 </body>
 <style>
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    color: #dbcbb7;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #fd767b;
+    text-align: center;
+  }
   header {
     background-color: var(--red-dark);
-    height: 40vw;
+    height: 30vw;
     width: 100%;
   }
 
