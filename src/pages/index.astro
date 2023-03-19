@@ -58,22 +58,27 @@ import "../styles/global.css";
       <div id="oplev">
         <h2>Experience</h2>
         <div class="oplev_grid">
-          <div>
-            <img src="/public/images/about/billede2.png" alt="blomstergren" />
+          <div class="boxes">
+            <p class="tekst_billede">Food</p>
+            <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
           </div>
-          <div>
-            <img src="/public/images/about/billede2.png" alt="blomstergren" />
+          <div class="boxes">
+            <p class="tekst_billede">Music</p>
+
+            <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
           </div>
-          <div>
-            <img src="/public/images/about/billede2.png" alt="blomstergren" />
+          <div class="boxes">
+            <p class="tekst_billede">Workshops</p>
+
+            <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
           </div>
         </div>
         <div id="grid">
-          <div>
-            <img src="/public/images/about/billede2.png" alt="blomstergren" />
+          <div class="boxes">
+            <p class="tekst_billede">Performance</p>
           </div>
-          <div>
-            <img src="/public/images/about/billede2.png" alt="blomstergren" />
+          <div class="box_lang">
+            <p class="tekst_billede">And much more</p>
           </div>
         </div>
       </div>
@@ -87,23 +92,19 @@ import "../styles/global.css";
 </html>
 
 <style>
+  /* Header */
+  #blomst {
+    position: absolute;
+    width: 51.5%;
+    left: 13vw;
+    transform: rotate(301deg);
+  }
+
   .pil {
     transition: 0.2s;
   }
-  .oplev_grid {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    overflow: hidden;
-    /* background-color: #79241f; */
-  }
-  .oplev_grid img {
-    border-radius: 1em;
-  }
+
+  /*  */
   #forside {
     position: absolute;
     left: 59vw;
@@ -113,8 +114,12 @@ import "../styles/global.css";
     margin-top: 3em;
   }
   #grid {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
+    /* grid-template-columns: 1fr 4fr; */
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
   .pil {
     color: var(--beige-dark);
@@ -131,8 +136,9 @@ import "../styles/global.css";
 
   header {
     background-color: var(--red-dark);
-    height: 70vw;
+    height: fit-content;
     width: 100%;
+    padding-bottom: 1em;
   }
   img {
     /* margin-top: 1em; */
@@ -141,12 +147,7 @@ import "../styles/global.css";
   #flex {
     display: flex;
   }
-  #blomst {
-    position: absolute;
-    width: 51.5%;
-    left: 13vw;
-    transform: rotate(301deg);
-  }
+
   .celebrate {
     font-size: 4vw;
     margin-bottom: 3vw;
@@ -210,6 +211,7 @@ import "../styles/global.css";
   .menu.isactive {
     left: 20vw;
     width: 23%;
+    z-index: 2;
   }
 
   .menu a {
@@ -237,6 +239,10 @@ import "../styles/global.css";
     content: "";
     display: block;
     overflow: initial;
+  }
+
+  .hamburger:hover {
+    opacity: 0.4;
   }
 
   .hamburger {
@@ -277,22 +283,68 @@ import "../styles/global.css";
   }
 
   /* program */
-  #program_div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    background-color: var(--beige-dark);
-    height: 55vw;
+
+  @media screen and (max-width: 599px) {
+    #program_div {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      background-color: var(--beige-dark);
+      height: 100vw;
+    }
+    #program_div img {
+      width: 30%;
+    }
+
+    #program_billeder {
+      display: flex;
+      justify-content: center;
+    }
+    #forside {
+      left: 42vw;
+      top: 104vw;
+    }
+    #program {
+      margin-top: 3vw;
+      gap: 3vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    #program_div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      background-color: var(--beige-dark);
+      height: 60vw;
+    }
+    #program button {
+      background-color: var(--red-medium);
+      padding: 1em;
+      border: none;
+      border-radius: 1em;
+      color: white;
+      font-family: "Poppins";
+      font-size: 2vw;
+      width: 24vw;
+    }
+    #program h2 {
+      letter-spacing: 0.3vw;
+    }
   }
 
   #program {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
 
-  button {
+  #program button {
     background-color: var(--red-medium);
     padding: 1em;
     width: 16vw;
@@ -324,6 +376,72 @@ import "../styles/global.css";
     font-size: 3vw;
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+
+  .box_lang:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .box_lang {
+    height: 21vw;
+    width: 58vw;
+    background-image: url(/public/images/about/billede2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    padding-bottom: 3vw;
+  }
+
+  .box_lang p {
+    width: 23vw;
+  }
+  .tekst_billede {
+    background-color: var(--red-medium);
+    /* width: 11vw; */
+    border-radius: 0.3em;
+    padding: 0.2em;
+    color: var(--beige-dark);
+    font-family: "Poppins";
+    text-align: end;
+    font-weight: 800;
+    letter-spacing: 0.2vw;
+    font-size: 2vw;
+  }
+
+  .boxes {
+    height: 21vw;
+    width: 28vw;
+    background-image: url(/public/images/about/billede2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    padding-bottom: 3vw;
+  }
+
+  .boxes:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .oplev_grid {
+    height: 107%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    gap: 1em;
+    overflow: hidden;
+    justify-content: center;
+  }
+  .oplev_grid img {
+    border-radius: 1em;
   }
 
   /* Youtube */
