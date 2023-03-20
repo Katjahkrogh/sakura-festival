@@ -6,7 +6,9 @@ const { title, title2 } = Astro.props;
   <header>
     <div></div>
     <div id="baggrund_header">
-      <img src="/public/images/sakura-logo.svg" alt="logo" width="20%" />
+      <a href="index">
+        <img src="/public/images/sakura-logo.svg" alt="logo" width="20%" class="logo" />
+      </a>
       <div id="nav_header">
         <h1>22-23. APRIL 2023</h1>
         <div class="hamburger">
@@ -48,7 +50,7 @@ const { title, title2 } = Astro.props;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 5rem;
-    color: #dbcbb7;
+    color: var(--beige-dark);
     text-align: center;
   }
   h2 {
@@ -61,11 +63,17 @@ const { title, title2 } = Astro.props;
   header {
     background-color: var(--red-dark);
     height: 30vw;
-    height: 50vw;
     width: 100%;
   }
+  #baggrund_header a {
+    width: 20vw;
+  }
+  .logo {
+    width: 100%;
+  }
+
   #baggrund_header h1 {
-    color: #e2d5c3;
+    color: var(--beige-dark);
     font-family: "Poppins", sans-serif;
     margin-right: 1em;
     font-size: 3vw;
@@ -112,10 +120,11 @@ const { title, title2 } = Astro.props;
   .menu a:hover {
     background-color: var(--beige-dark);
   }
+
   .hamburger,
   .hamburger:after,
   .hamburger:before {
-    height: 5px;
+    height: 0.4vw;
     background-color: var(--beige-medium);
     margin: 6px 0px;
     transition: 0.4s;
@@ -126,7 +135,7 @@ const { title, title2 } = Astro.props;
   .hamburger {
     position: relative;
     display: block;
-    width: 45px;
+    width: 3.5vw;
     cursor: pointer;
     appearance: none;
     background: none;
@@ -148,11 +157,11 @@ const { title, title2 } = Astro.props;
     --pink-medium: #e8d0ce;
     --pink-light: #f1e9e8;
   }
-  @media (max-width: 960px) {
+  /* @media (max-width: 960px) {
     #baggrund_header img {
       margin-bottom: 3em;
     }
-  }
+  } */
 
   @media screen and (max-width: 599px) {
     .menu.isactive {
