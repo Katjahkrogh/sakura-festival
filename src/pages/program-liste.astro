@@ -38,7 +38,7 @@ const data = await response.json();
         />
         <Button title="Sunday" variant="day" size="desktop" theclass="sunday" />
         <Button
-          title="all"
+          title="All"
           variant="day"
           size="desktop"
           theclass="all"
@@ -53,8 +53,9 @@ const data = await response.json();
               billede={`../images/aktiviteter/${event.billede}`}
               link={"/events/" + event.id}
               beskrivelse={event.beskrivelse}
-              japansk={event.japansk_tegn}
+              japansk={event.japapansk_tegn}
               day={event.day}
+              stage={event.location}
             />
           ))
         }
@@ -69,6 +70,8 @@ const data = await response.json();
   document.querySelector(".saturday").addEventListener("click", dayClick);
   document.querySelector(".sunday").addEventListener("click", dayClick);
   document.querySelector(".all").addEventListener("click", dayClick);
+
+  document.querySelector(".all").classList.add("active");
 
   function dayClick(evt) {
     const filter = evt.target.dataset.day;
@@ -110,7 +113,7 @@ const data = await response.json();
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    overflow: hidden;
     background-color: var(--pink-light);
   }
 
@@ -124,7 +127,7 @@ const data = await response.json();
     width: 100vw;
     min-height: 100px;
     background-color: var(--red-dark);
-
+    margin-bottom: 5%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

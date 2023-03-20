@@ -4,7 +4,12 @@ import "../styles/global.css";
 const { title, variant, size, theclass } = Astro.props;
 ---
 
-<button class={theclass} data-day={theclass} data-variant={variant} data-size={size}>
+<button
+  class={theclass}
+  data-day={theclass}
+  data-variant={variant}
+  data-size={size}
+>
   {title}
 </button>
 
@@ -99,10 +104,9 @@ const { title, variant, size, theclass } = Astro.props;
       color: var(--beige-dark);
       margin: 40px 0;
     }
-
-    .active {
-      background-color: var(--red-medium);
-      font-weight: 900;
-    }
+  }
+  .active {
+    background-color: var(--red-medium);
+    font-weight: 900;
   }
 </style>
