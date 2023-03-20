@@ -32,23 +32,25 @@ import "../styles/global.css";
         </div>
       </div>
       <div id="flex">
-        <img src="/public/images/rødring.png" alt="rødring" width="50%" />
+        <img src="/public/images/rødring.png" alt="rødring" width="40%" />
         <img src="/public/images/blomstergren.png" alt="blomstergren" id="blomst" />
         <div id="tekst_forside">
           <h1>SAKURA FESTIVAL</h1>
           <h2 class="celebrate">Celebrate the blooming...</h2>
-          <h2>開花を祝う</h2>
+          <div id="tekstpil">
+            <h2>開花を祝う</h2>
+            <div>
+              <a href="#program" class="pil">&#8595;</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <a href="#program" class="pil">&#8595;</a>
       </div>
     </header>
     <main>
       <div id="program_div">
         <div id="program">
           <h2>The festival program</h2>
-          <button>Download here</button>
+          <button>Find it here</button>
         </div>
         <div id="program_billeder">
           <img src="/public/images/flyer.webp" alt="blomstergren" width="50%" />
@@ -57,409 +59,509 @@ import "../styles/global.css";
       </div>
       <div id="oplev">
         <h2>Experience</h2>
-        <div class="oplev_grid">
-          <div class="boxes">
-            <p class="tekst_billede">Food</p>
-            <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
-          </div>
-          <div class="boxes">
-            <p class="tekst_billede">Music</p>
+        <div id="oplev_stor">
+          <div class="oplev_grid">
+            <div class="boxes">
+              <p class="tekst_billede" class="kort">Food</p>
+              <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
+            </div>
+            <div class="boxes">
+              <p class="tekst_billede" class="kort">Music</p>
 
-            <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
-          </div>
-          <div class="boxes">
-            <p class="tekst_billede">Workshops</p>
+              <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
+            </div>
+            <div class="boxes">
+              <p class="tekst_billede">Workshops</p>
 
-            <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
+              <!-- <img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
+            </div>
           </div>
-        </div>
-        <div id="grid">
-          <div class="boxes">
-            <p class="tekst_billede">Performance</p>
-          </div>
-          <div class="box_lang">
-            <p class="tekst_billede">And much more</p>
+          <div id="grid">
+            <div class="boxes">
+              <p class="tekst_billede">Performance</p>
+            </div>
+            <div class="box_lang">
+              <p class="tekst_billede">And much more</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div id="youtube">
+        <img src="/public/images/roedeprikker.png" alt="roedeprikker" />
         <h2>Last years festival</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/vZGJPqfaOEA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </div>
     </main>
   </body>
   <Footer />
-</html>
 
-<style>
-  /* Header */
-  #blomst {
-    position: absolute;
-    width: 51.5%;
-    left: 13vw;
-    transform: rotate(301deg);
-  }
-
-  .pil {
-    transition: 0.2s;
-  }
-
-  /*  */
-  #forside {
-    position: absolute;
-    left: 59vw;
-    top: 86vw;
-  }
-  #program_billeder {
-    margin-top: 3em;
-  }
-  #grid {
-    display: flex;
-    /* grid-template-columns: 1fr 4fr; */
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-  .pil {
-    color: var(--beige-dark);
-    font-size: 6vw;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 1em;
-    font-weight: bolder;
-  }
-  .pil:hover {
-    color: var(--red-medium);
-    transition: 0.2s;
-  }
-
-  header {
-    background-color: var(--red-dark);
-    height: fit-content;
-    width: 100%;
-    padding-bottom: 1em;
-  }
-  img {
-    /* margin-top: 1em; */
-  }
-
-  #flex {
-    display: flex;
-  }
-
-  .celebrate {
-    font-size: 4vw;
-    margin-bottom: 3vw;
-  }
-  #tekst_forside {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 4vw;
-    padding-bottom: 6em;
-    z-index: 1;
-  }
-
-  #tekst_forside h1 {
-    color: var(--beige-dark);
-    font-family: Moyko;
-    position: absolute;
-    letter-spacing: 0.5vw;
-    z-index: 1;
-    top: 22vw;
-    left: 33vw;
-    font-size: 7vw;
-  }
-  #tekst_forside h2 {
-    color: var(--beige-medium);
-    font-size: 3.2vw;
-  }
-
-  #nav_header h1 {
-    color: #e2d5c3;
-    font-family: "Poppins", sans-serif;
-    margin-right: 1em;
-    font-size: 3vw;
-    margin-top: 18px;
-  }
-
-  #nav_header {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  #nav_header {
-    display: flex;
-    padding: 1em;
-  }
-  .menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 31%;
-    padding: 1em;
-    transition: 0.4s;
-    border-radius: 1em;
-    margin-left: 45em;
-    margin-top: 8em;
-    padding: 1em;
-    height: fit-content;
-    background-color: var(--beige-medium);
-  }
-  .menu.isactive {
-    left: 20vw;
-    width: 23%;
-    z-index: 2;
-  }
-
-  .menu a {
-    display: block;
-    text-align: center;
-    padding: 12px 16px;
-    margin: 0 auto 16px;
-    color: black;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-size: 2vw;
-    height: fit-content;
-  }
-  .menu a:hover {
-    background-color: var(--beige-dark);
-  }
-
-  .hamburger,
-  .hamburger:after,
-  .hamburger:before {
-    height: 5px;
-    background-color: var(--beige-medium);
-    margin: 6px 0px;
-    transition: 0.4s;
-    content: "";
-    display: block;
-    overflow: initial;
-  }
-
-  .hamburger:hover {
-    opacity: 0.4;
-  }
-
-  .hamburger {
-    position: relative;
-    display: block;
-    width: 45px;
-    cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-    align-self: self-start;
-    margin-top: 2vw;
-    height: 20px;
-  }
-  :root {
-    --black: #000000;
-    --brown: #5f2a0d;
-    --red-dark: #79241f;
-    --red-medium: #b43830;
-    --red-light: #d2625a;
-    --beige-dark: #e2d5c3;
-    --beige-medium: #f6f1e9;
-    --beige-light: #f5f5f5;
-    --pink-medium: #e8d0ce;
-    --pink-light: #f1e9e8;
-  }
-
-  @media (max-width: 960px) {
-    #baggrund_header img {
-      margin-bottom: 3em;
+  <style>
+    /* Header */
+    #blomst {
+      position: absolute;
+      width: 35.5%;
+      left: 13vw;
+      transform: rotate(301deg);
+      animation: synlighed 2s ease both;
     }
-  }
 
-  @font-face {
-    font-family: "Moyko";
-    src: "../public/font/Moyko.ttf";
-  }
+    @keyframes synlighed {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0.25;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      75% {
+        opacity: 0.75;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
-  /* program */
+    .pil {
+      transition: 0.2s;
+    }
+    #tekstpil {
+      display: flex;
+      justify-content: space-between;
+    }
+    /*  */
+    #forside {
+      position: absolute;
+      left: 59vw;
+      top: 71vw;
+    }
+    #program_billeder {
+      margin-top: 3em;
+    }
+    #grid {
+      display: flex;
+      /* grid-template-columns: 1fr 4fr; */
+      justify-content: center;
+      gap: 1em;
+      margin-top: 1em;
+      margin-bottom: 4em;
+    }
+    .pil {
+      color: var(--beige-dark);
+      font-size: 6vw;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 1em;
+      font-weight: bolder;
+    }
+    .pil:hover {
+      color: var(--red-medium);
+      transition: 0.2s;
+    }
 
-  @media screen and (max-width: 599px) {
-    #program_div {
+    header {
+      background-color: var(--red-dark);
+      height: fit-content;
+      width: 100%;
+      padding-bottom: 1em;
+    }
+    img {
+      /* margin-top: 1em; */
+    }
+
+    #flex {
+      display: flex;
+    }
+
+    .celebrate {
+      font-size: 4vw;
+      margin-bottom: 3vw;
+    }
+    #tekst_forside {
       display: flex;
       flex-direction: column;
-      justify-items: center;
-      background-color: var(--beige-dark);
-      height: 100vw;
-    }
-    #program_div img {
-      width: 30%;
+      justify-content: flex-end;
+      padding-bottom: 6em;
+      z-index: 1;
+      margin-top: 4em;
     }
 
-    #program_billeder {
+    #tekst_forside h1 {
+      color: var(--beige-dark);
+      font-family: Moyko;
+      position: absolute;
+      letter-spacing: 0.5vw;
+      z-index: 1;
+      top: 16vw;
+      left: 33vw;
+      font-size: 7vw;
+    }
+    #tekst_forside h2 {
+      color: var(--beige-dark);
+      font-size: 3.2vw;
+    }
+
+    #nav_header h1 {
+      color: #e2d5c3;
+      font-family: "Poppins", sans-serif;
+      margin-right: 1em;
+      font-size: 3vw;
+      margin-top: 18px;
+    }
+
+    #nav_header {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
     }
-    #forside {
-      left: 42vw;
-      top: 104vw;
+
+    #nav_header {
+      display: flex;
+      padding: 1em;
     }
+    .menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 31%;
+      padding: 1em;
+      transition: 0.4s;
+      border-radius: 1em;
+      margin-left: 45em;
+      margin-top: 8em;
+      padding: 1em;
+      height: fit-content;
+      background-color: var(--beige-medium);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .menu a {
+      display: block;
+      text-align: center;
+      padding: 12px 16px;
+      margin: 0 auto 16px;
+      color: black;
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      font-size: 2vw;
+      height: fit-content;
+    }
+    .menu a:hover {
+      background-color: var(--beige-dark);
+    }
+
+    .hamburger,
+    .hamburger:after,
+    .hamburger:before {
+      height: 5px;
+      background-color: var(--beige-medium);
+      margin: 6px 0px;
+      transition: 0.4s;
+      content: "";
+      display: block;
+      overflow: initial;
+    }
+
+    .hamburger:hover {
+      opacity: 0.4;
+    }
+
+    .hamburger {
+      position: relative;
+      display: block;
+      width: 45px;
+      cursor: pointer;
+      appearance: none;
+      background: none;
+      outline: none;
+      border: none;
+      align-self: self-start;
+      margin-top: 2vw;
+      height: 20px;
+    }
+    :root {
+      --black: #000000;
+      --brown: #5f2a0d;
+      --red-dark: #79241f;
+      --red-medium: #b43830;
+      --red-light: #d2625a;
+      --beige-dark: #e2d5c3;
+      --beige-medium: #f6f1e9;
+      --beige-light: #f5f5f5;
+      --pink-medium: #e8d0ce;
+      --pink-light: #f1e9e8;
+    }
+
+    @media (max-width: 960px) {
+      #baggrund_header img {
+        margin-bottom: 3em;
+      }
+    }
+
+    @font-face {
+      font-family: "Moyko";
+      src: "../public/font/Moyko.ttf";
+    }
+
+    /* program */
+
+    @media screen and (max-width: 599px) {
+      #program_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: var(--beige-dark);
+        height: 100vw;
+        padding-top: 2em;
+      }
+      #program_div img {
+        width: 30%;
+      }
+
+      #program_billeder {
+        display: flex;
+        justify-content: center;
+      }
+      #forside {
+        left: 41vw;
+        top: 111vw;
+      }
+      #program {
+        margin-top: 3vw;
+        gap: 3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #program h2 {
+        gap: 3vw;
+      }
+      .menu.isactive {
+        left: -120vw;
+        width: 38%;
+        top: -12vw;
+        z-index: 2;
+        height: 61vw;
+      }
+      #blomst {
+        position: absolute;
+        width: 39%;
+        left: 6vw;
+        transform: rotate(301deg);
+      }
+      #tekst_forside {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 2em;
+        z-index: 1;
+        margin-top: 5em;
+      }
+      #tekst_forside h1 {
+        color: var(--beige-dark);
+        font-family: Moyko;
+        position: absolute;
+        letter-spacing: 0.5vw;
+        z-index: 1;
+        top: 22vw;
+        left: 33vw;
+        font-size: 7vw;
+      }
+      #program button {
+        background-color: var(--red-medium);
+        padding: 1em;
+        width: 26vw;
+        border: none;
+        border-radius: 1em;
+        color: white;
+        font-family: "Poppins";
+        font-size: 2.4vw;
+      }
+
+      #program h2 {
+        font-size: 4.2vw;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      #program_div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: space-evenly;
+        background-color: var(--beige-dark);
+        height: 60vw;
+        padding-left: 4em;
+      }
+      #program button {
+        background-color: var(--red-medium);
+        padding: 1em;
+        border: none;
+        border-radius: 1em;
+        color: white;
+        font-family: "Poppins";
+        font-size: 2vw;
+        width: 24vw;
+      }
+      #program h2 {
+        letter-spacing: 0.3vw;
+      }
+
+      .menu.isactive {
+        left: 24vw;
+        width: 23%;
+        z-index: 2;
+      }
+    }
+
     #program {
-      margin-top: 3vw;
-      gap: 3vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 3vw;
     }
-  }
 
-  @media screen and (min-width: 600px) {
-    #program_div {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
-      background-color: var(--beige-dark);
-      height: 60vw;
+    #program button:hover {
+      background-color: var(--red-dark);
+      cursor: pointer;
+      transition: 0.2s;
     }
-    #program button {
-      background-color: var(--red-medium);
-      padding: 1em;
-      border: none;
-      border-radius: 1em;
-      color: white;
+    h2 {
       font-family: "Poppins";
-      font-size: 2vw;
-      width: 24vw;
     }
     #program h2 {
-      letter-spacing: 0.3vw;
+      font-size: 3.2vw;
     }
-  }
 
-  #program {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    /* oplev */
+    #oplev {
+      background-color: white;
+    }
+    #oplev h2 {
+      text-align: center;
+      font-size: 3vw;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      letter-spacing: 0.2vw;
+    }
 
-  #program button {
-    background-color: var(--red-medium);
-    padding: 1em;
-    width: 16vw;
-    border: none;
-    border-radius: 1em;
-    color: white;
-    font-family: "Poppins";
-    font-size: 1.4vw;
-  }
+    .box_lang:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    .box_lang {
+      height: 21vw;
+      width: 58vw;
+      background-image: url(/public/images/about/billede2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: end;
+      padding-bottom: 3vw;
+    }
 
-  button:hover {
-    background-color: var(--red-dark);
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  h2 {
-    font-family: "Poppins";
-  }
-  #program h2 {
-    font-size: 3.2vw;
-  }
+    .box_lang p {
+      width: 23vw;
+    }
+    .tekst_billede {
+      background-color: var(--red-medium);
+      /* width: 11vw; */
+      border-radius: 0.3em;
+      padding: 0.2em;
+      color: var(--beige-dark);
+      font-family: "Poppins";
+      text-align: end;
+      font-weight: 800;
+      letter-spacing: 0.2vw;
+      font-size: 2vw;
+    }
 
-  /* oplev */
-  #oplev {
-    background-color: white;
-  }
-  #oplev h2 {
-    text-align: center;
-    font-size: 3vw;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+    .boxes {
+      height: 21vw;
+      width: 28vw;
+      background-image: url(/public/images/about/billede2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: end;
+      padding-bottom: 3vw;
+    }
 
-  .box_lang:hover {
-    cursor: pointer;
-    opacity: 0.7;
-  }
-  .box_lang {
-    height: 21vw;
-    width: 58vw;
-    background-image: url(/public/images/about/billede2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: end;
-    padding-bottom: 3vw;
-  }
+    .boxes:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    .oplev_grid {
+      height: 107%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      gap: 1em;
+      overflow: hidden;
+      justify-content: center;
+    }
+    .oplev_grid img {
+      border-radius: 1em;
+    }
 
-  .box_lang p {
-    width: 23vw;
-  }
-  .tekst_billede {
-    background-color: var(--red-medium);
-    /* width: 11vw; */
-    border-radius: 0.3em;
-    padding: 0.2em;
-    color: var(--beige-dark);
-    font-family: "Poppins";
-    text-align: end;
-    font-weight: 800;
-    letter-spacing: 0.2vw;
-    font-size: 2vw;
-  }
+    /* Youtube */
 
-  .boxes {
-    height: 21vw;
-    width: 28vw;
-    background-image: url(/public/images/about/billede2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: end;
-    padding-bottom: 3vw;
-  }
+    #youtube {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4em;
+      padding: 6vw;
+      background-color: var(--pink-medium);
+    }
 
-  .boxes:hover {
-    cursor: pointer;
-    opacity: 0.7;
-  }
-  .oplev_grid {
-    height: 107%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    gap: 1em;
-    overflow: hidden;
-    justify-content: center;
-  }
-  .oplev_grid img {
-    border-radius: 1em;
-  }
+    #youtube h2 {
+      text-align: center;
+      font-size: 3vw;
+      letter-spacing: 0.5vw;
+      z-index: 2;
+    }
 
-  /* Youtube */
+    #youtube img {
+      position: absolute;
+      width: 78vw;
+      top: 168vw;
+    }
 
-  #youtube h2 {
-    text-align: center;
-    font-size: 3vw;
-  }
-</style>
-<script>
-  window.onload = function () {
-    const menu_btn = document.querySelector(".hamburger");
+    iframe {
+      z-index: 2;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const menu_btn = document.querySelector(".hamburger");
 
-    const mobile_menu = document.querySelector(".menu");
+      const mobile_menu = document.querySelector(".menu");
 
-    menu_btn.addEventListener("click", function () {
-      menu_btn.classList.toggle("isactive");
-      mobile_menu.classList.toggle("isactive");
-    });
-  };
-</script>
+      menu_btn.addEventListener("click", function () {
+        menu_btn.classList.toggle("isactive");
+        mobile_menu.classList.toggle("isactive");
+      });
+    };
+  </script>
+</html>
