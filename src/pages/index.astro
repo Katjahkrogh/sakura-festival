@@ -253,26 +253,25 @@ import "../styles/global.css";
       background-color: var(--beige-dark);
     }
 
+    .menu a:hover {
+      background-color: var(--beige-dark);
+    }
+
     .hamburger,
     .hamburger:after,
     .hamburger:before {
-      height: 5px;
-      background-color: var(--beige-medium);
+      height: 0.4vw;
+      background-color: var(--beige-dark);
       margin: 6px 0px;
       transition: 0.4s;
       content: "";
       display: block;
       overflow: initial;
     }
-
-    .hamburger:hover {
-      opacity: 0.4;
-    }
-
     .hamburger {
       position: relative;
       display: block;
-      width: 45px;
+      width: 3.5vw;
       cursor: pointer;
       appearance: none;
       background: none;
@@ -282,19 +281,6 @@ import "../styles/global.css";
       margin-top: 2vw;
       height: 20px;
     }
-    :root {
-      --black: #000000;
-      --brown: #5f2a0d;
-      --red-dark: #79241f;
-      --red-medium: #b43830;
-      --red-light: #d2625a;
-      --beige-dark: #e2d5c3;
-      --beige-medium: #f6f1e9;
-      --beige-light: #f5f5f5;
-      --pink-medium: #e8d0ce;
-      --pink-light: #f1e9e8;
-    }
-
     @media (max-width: 960px) {
       #baggrund_headerimg {
         margin-bottom: 3em;
