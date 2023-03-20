@@ -2,6 +2,7 @@
 import Singleview from "../../components/Singleview.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import "../../styles/global.css";
 
 export async function getStaticPaths() {
   const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/events";
@@ -28,7 +29,7 @@ const { event } = Astro.props;
 
 <html>
   <body>
-    <Header title={event.event} title2={event.japansk_tegn} />
+    <Header title={event.event} title2={event.japapansk_tegn} />
     <main>
       <Singleview
         tekst={event.beskrivelse}

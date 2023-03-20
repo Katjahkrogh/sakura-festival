@@ -2,13 +2,14 @@
 import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
 import "../styles/global.css";
 import Singleview from "./Singleview.astro";
-const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
+const { navn, billede, link, stage, japansk, day } = Astro.props;
 ---
 
 <article class={"theCard " + day}>
   <a href={link} target="blank"
     ><div class="img_container">
       <img src={billede} alt="billede" />
+      <p>{stage}</p>
     </div></a
   >
   <a href={link}>
@@ -17,10 +18,7 @@ const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
         <h3>{navn}</h3>
         <a href={link}><h3 class="arrow">&#8594;</h3></a>
       </div>
-      <h3>{japansk}</h3>
-      <p>
-        {beskrivelse}
-      </p>
+      <h4>{japansk}</h4>
     </section>
   </a>
 </article>
@@ -28,8 +26,8 @@ const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
 <style>
   article {
     width: 310px;
-    height: max-content;
     margin: 20px 0;
+    height: max-content;
     overflow: hidden;
   }
 
@@ -43,13 +41,21 @@ const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
   .overskrift {
     display: flex;
     justify-content: space-between;
+    margin-top: -5%;
   }
 
+  h4 {
+    font-size: 27px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 45px;
+    color: var(--red-medium);
+    margin-top: -12%;
+  }
   h3 {
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     font-weight: 500;
-    line-height: 45px;
     letter-spacing: 0em;
     text-align: left;
 
@@ -61,15 +67,15 @@ const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
   }
   p {
     font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0em;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    background-color: var(--beige-dark);
+    text-transform: uppercase;
     text-align: left;
-    margin-top: -10%;
-
-    color: var(--black);
-    max-width: 500px;
+    padding: 1rem;
+    margin-top: -1%;
+    max-width: 86%;
   }
 
   .hide {
@@ -79,7 +85,7 @@ const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
   @media (min-width: 1200px) {
     article {
       width: 500px;
-      height: 750px;
+      height: fit-content;
     }
     img {
       aspect-ratio: 3/2;
@@ -92,12 +98,35 @@ const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
       font-size: 40px;
       line-height: 60px;
     }
+
+    p {
+      max-width: 100%;
+    }
+
+    h4 {
+      margin-top: -5%;
+    }
   }
 
   @media (min-width: 1500px) {
     article {
       width: 600px;
-      height: 750px;
+      height: fit-content;
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      background-color: var(--beige-dark);
+      text-transform: uppercase;
+      text-align: left;
+      padding: 1rem;
+      margin-top: -1%;
+      max-width: 110%;
+    }
+    h4 {
+      margin-top: -5%;
     }
   }
 </style>
