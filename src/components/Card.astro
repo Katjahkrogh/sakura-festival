@@ -1,7 +1,8 @@
 ---
 import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
 import "../styles/global.css";
-const { navn, billede, link, beskrivelse, japansk, day } = Astro.props;
+import Singleview from "./Singleview.astro";
+const { navn, billede, link, beskrivelse, japansk, day, event } = Astro.props;
 ---
 
 <article class={"theCard " + day}>
@@ -10,11 +11,11 @@ const { navn, billede, link, beskrivelse, japansk, day } = Astro.props;
       <img src={billede} alt="billede" />
     </div></a
   >
-  <a href={link} target="blank">
+  <a href={link}>
     <section>
       <div class="overskrift">
         <h3>{navn}</h3>
-        <a href="program-singleview"><h3 class="arrow">&#8594;</h3></a>
+        <a href={link}><h3 class="arrow">&#8594;</h3></a>
       </div>
       <h3>{japansk}</h3>
       <p>
