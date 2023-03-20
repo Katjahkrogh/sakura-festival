@@ -53,7 +53,7 @@ import "../styles/global.css";
           <button>Find it here</button>
         </div>
         <div id="program_billeder">
-          <img src="/public/images/flyer.webp" alt="blomstergren" width="50%" />
+          <img src="/public/images/flyer.webp" alt="flyer" width="50%" />
           <img src="/public/images/forside.png" alt="forside" width="25%" id="forside" />
         </div>
       </div>
@@ -61,23 +61,18 @@ import "../styles/global.css";
         <h2>Experience</h2>
         <div id="oplev_stor">
           <div class="oplev_grid">
-            <div class="boxes">
+            <div class="boxes" id="box1">
               <p class="tekst_billede" class="kort">Food</p>
-              <!--<img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
             </div>
-            <div class="boxes">
+            <div class="boxes" id="box2">
               <p class="tekst_billede" class="kort">Music</p>
-
-              <!--<img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
             </div>
-            <div class="boxes">
+            <div class="boxes" id="box3">
               <p class="tekst_billede">Workshops</p>
-
-              <!--<img src="/public/images/about/billede2.png" alt="blomstergren" /> -->
             </div>
           </div>
           <div id="grid">
-            <div class="boxes">
+            <div class="boxes" id="box4">
               <p class="tekst_billede">Performance</p>
             </div>
             <div class="box_lang">
@@ -110,10 +105,10 @@ import "../styles/global.css";
       width: 35.5%;
       left: 13vw;
       transform: rotate(301deg);
-      animation: synlighed 2seaseboth;
+      animation: synlighed 2s ease-in-out;
     }
 
-    @keyframessynlighed {
+    @keyframes synlighed {
       0% {
         opacity: 0;
       }
@@ -149,7 +144,6 @@ import "../styles/global.css";
     }
     #grid {
       display: flex;
-      /*grid-template-columns: 1fr 4fr; */
       justify-content: center;
       gap: 1em;
       margin-top: 1em;
@@ -174,9 +168,6 @@ import "../styles/global.css";
       width: 100%;
       padding-bottom: 1em;
     }
-    img {
-      /*margin-top: 1em; */
-    }
 
     #flex {
       display: flex;
@@ -195,7 +186,7 @@ import "../styles/global.css";
       margin-top: 4em;
     }
 
-    #tekst_forsideh1 {
+    #tekst_forside h1 {
       color: var(--beige-dark);
       font-family: Moyko;
       position: absolute;
@@ -205,12 +196,12 @@ import "../styles/global.css";
       left: 33vw;
       font-size: 7vw;
     }
-    #tekst_forsideh2 {
+    #tekst_forside h2 {
       color: var(--beige-dark);
       font-size: 3.2vw;
     }
 
-    #nav_headerh1 {
+    #nav_header h1 {
       color: #e2d5c3;
       font-family: "Poppins", sans-serif;
       margin-right: 1em;
@@ -247,7 +238,7 @@ import "../styles/global.css";
       scroll-behavior: smooth;
     }
 
-    .menua {
+    .menu a {
       display: block;
       text-align: center;
       padding: 12px16px;
@@ -258,7 +249,7 @@ import "../styles/global.css";
       font-size: 2vw;
       height: fit-content;
     }
-    .menua:hover {
+    .menu a:hover {
       background-color: var(--beige-dark);
     }
 
@@ -267,7 +258,7 @@ import "../styles/global.css";
     .hamburger:before {
       height: 5px;
       background-color: var(--beige-medium);
-      margin: 6px0px;
+      margin: 6px 0px;
       transition: 0.4s;
       content: "";
       display: block;
@@ -317,7 +308,7 @@ import "../styles/global.css";
 
     /*program */
 
-    @mediascreenand (max-width: 599px) {
+    @media screen and (max-width: 599px) {
       #program_div {
         display: flex;
         flex-direction: column;
@@ -326,7 +317,7 @@ import "../styles/global.css";
         height: 100vw;
         padding-top: 2em;
       }
-      #program_divimg {
+      #program_div img {
         width: 30%;
       }
 
@@ -346,7 +337,7 @@ import "../styles/global.css";
         justify-content: center;
         align-items: center;
       }
-      #programh2 {
+      #program h2 {
         gap: 3vw;
       }
       .menu.isactive {
@@ -354,7 +345,10 @@ import "../styles/global.css";
         width: 38%;
         top: -12vw;
         z-index: 2;
-        height: 61vw;
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
       }
       #blomst {
         position: absolute;
@@ -370,7 +364,7 @@ import "../styles/global.css";
         z-index: 1;
         margin-top: 5em;
       }
-      #tekst_forsideh1 {
+      #tekst_forside h1 {
         color: var(--beige-dark);
         font-family: Moyko;
         position: absolute;
@@ -380,7 +374,7 @@ import "../styles/global.css";
         left: 33vw;
         font-size: 7vw;
       }
-      #programbutton {
+      #program button {
         background-color: var(--red-medium);
         padding: 1em;
         width: 26vw;
@@ -391,21 +385,24 @@ import "../styles/global.css";
         font-size: 2.4vw;
       }
 
-      #programh2 {
+      #program h2 {
         font-size: 4.2vw;
+      }
+      #youtube img {
+        opacity: 0;
       }
     }
 
-    @mediascreenand (min-width: 600px) {
+    @media screen and (min-width: 600px) {
       #program_div {
         display: grid;
-        grid-template-columns: 1fr1fr;
+        grid-template-columns: 1fr 1fr;
         align-content: space-evenly;
         background-color: var(--beige-dark);
         height: 60vw;
         padding-left: 4em;
       }
-      #programbutton {
+      #program button {
         background-color: var(--red-medium);
         padding: 1em;
         border: none;
@@ -415,7 +412,7 @@ import "../styles/global.css";
         font-size: 2vw;
         width: 24vw;
       }
-      #programh2 {
+      #program h2 {
         letter-spacing: 0.3vw;
       }
 
@@ -423,6 +420,10 @@ import "../styles/global.css";
         left: 24vw;
         width: 23%;
         z-index: 2;
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
       }
     }
 
@@ -434,7 +435,7 @@ import "../styles/global.css";
       gap: 3vw;
     }
 
-    #programbutton:hover {
+    #program button:hover {
       background-color: var(--red-dark);
       cursor: pointer;
       transition: 0.2s;
@@ -442,7 +443,7 @@ import "../styles/global.css";
     h2 {
       font-family: "Poppins";
     }
-    #programh2 {
+    #program h2 {
       font-size: 3.2vw;
     }
 
@@ -450,7 +451,7 @@ import "../styles/global.css";
     #oplev {
       background-color: white;
     }
-    #oplevh2 {
+    #oplev h2 {
       text-align: center;
       font-size: 3vw;
       margin-top: 1em;
@@ -465,7 +466,7 @@ import "../styles/global.css";
     .box_lang {
       height: 21vw;
       width: 58vw;
-      background-image: url(/public/images/about/billede2.png);
+      background-image: url(/public/images/aktiviteter/fløjte.png);
       background-size: cover;
       background-repeat: no-repeat;
       border-radius: 1em;
@@ -476,7 +477,7 @@ import "../styles/global.css";
       padding-bottom: 3vw;
     }
 
-    .box_langp {
+    .box_lang p {
       width: 23vw;
     }
     .tekst_billede {
@@ -495,7 +496,7 @@ import "../styles/global.css";
     .boxes {
       height: 21vw;
       width: 28vw;
-      background-image: url(/public/images/about/billede2.png);
+      /* background-image: url(/public/images/about/billede2.png); */
       background-size: cover;
       background-repeat: no-repeat;
       border-radius: 1em;
@@ -505,11 +506,40 @@ import "../styles/global.css";
       align-items: end;
       padding-bottom: 3vw;
     }
+    #box1 {
+      background-image: url(/public/images/boder/saito.png);
+    }
+
+    #box1 p {
+      width: 10vw;
+    }
+    #box2 {
+      background-image: url(/public/images/aktiviteter/wadaiko.png);
+    }
+    #box2 p {
+      width: 10vw;
+    }
+
+    #box3 {
+      background-image: url(/public/images/aktiviteter/anime_drawing.png);
+    }
+
+    #box3 p {
+      width: 17vw;
+    }
+    #box4 {
+      background-image: url(/public/images/aktiviteter/aikido.png);
+    }
+    #box4 p {
+      width: 20vw;
+    }
 
     .boxes:hover {
       cursor: pointer;
       opacity: 0.7;
+      width: 28.1vw;
     }
+
     .oplev_grid {
       height: 107%;
       width: 100%;
@@ -520,7 +550,7 @@ import "../styles/global.css";
       overflow: hidden;
       justify-content: center;
     }
-    .oplev_gridimg {
+    .oplev_grid img {
       border-radius: 1em;
     }
 
@@ -535,17 +565,17 @@ import "../styles/global.css";
       background-color: var(--pink-medium);
     }
 
-    #youtubeh2 {
+    #youtube h2 {
       text-align: center;
       font-size: 3vw;
       letter-spacing: 0.5vw;
       z-index: 2;
     }
 
-    #youtubeimg {
+    #youtube img {
       position: absolute;
       width: 78vw;
-      top: 168vw;
+      top: 170vw;
     }
 
     iframe {

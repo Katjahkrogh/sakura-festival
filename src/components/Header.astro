@@ -16,9 +16,6 @@ const { title, title2 } = Astro.props;
             <span class="line"></span>
           </div>
         </div>
-        <!-- <button class="hamburger">
-        <div class="bar"></div>
-      </button> -->
       </div>
     </div>
     <div class="hejhej">
@@ -154,6 +151,30 @@ const { title, title2 } = Astro.props;
   @media (max-width: 960px) {
     #baggrund_header img {
       margin-bottom: 3em;
+    }
+  }
+
+  @media screen and (max-width: 599px) {
+    .menu.isactive {
+      left: -120vw;
+      width: 38%;
+      top: -12vw;
+      z-index: 2;
+      height: 35vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .menu.isactive {
+      left: 24vw;
+      width: 23%;
+      z-index: 2;
+      height: 35vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
   }
 </style>
