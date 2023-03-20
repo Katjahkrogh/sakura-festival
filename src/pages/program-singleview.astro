@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import Singleview from "../components/Singleview.astro";
 ---
 
 <html lang="en">
@@ -15,23 +16,7 @@ import Header from "../components/Header.astro";
   <body>
     <Header title="Headline" title2="三味線" />
     <main>
-      <article>
-        <section class="headline">
-          <img src="../images/aktiviteter/fløjte.png" alt="fløjte" />
-        </section>
-        <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          ullamcorper commodo porttitor. Maecenas at quam malesuada, dictum nisi
-          in, lacinia nulla. Vestibulum ornare quam mi, sed euismod quam
-          scelerisque a. Cras sit amet lorem nulla. In porta ornare nisi.
-          Curabitur congue enim ut ex venenatis auctor.
-        </p>
-        <p class="second-text">
-          Vestibulum at lacus lorem. Aenean et consequat velit, vitae aliquet
-          risus. Fusce eleifend lacus interdum, ornare ligula at, molestie
-          justo. Donec eros massa,
-        </p>
-      </article>
+      <Singleview />
     </main>
     <img src="../images/blomstergren.png" alt="blomst" id="blomst" />
     <Footer />
@@ -42,42 +27,5 @@ import Header from "../components/Header.astro";
   /* extra light = 200, light = 300, regular = 400, medium = 500, semi-bold = 600, bold = 700 */
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-  body {
-    background-color: #e2d5c3;
-  }
 
-  main {
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-  }
-  .headline {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .headline img {
-    max-width: 80%;
-  }
-
-  img {
-    margin-top: 10%;
-  }
-
-  .text {
-    margin-left: 10%;
-    margin-top: 10%;
-  }
-
-  .second-text {
-    max-width: 500px;
-    margin-left: 45%;
-    margin-top: 5%;
-    color: var(--red-dark);
-  }
-
-  #blomst {
-    margin-top: -10%;
-    width: 35%;
-  }
 </style>

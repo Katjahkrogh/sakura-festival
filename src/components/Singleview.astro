@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+import Footer from "./Footer.astro";
+const { tekst, billede } = Astro.props;
+---
+
+<main>
+  <article>
+    <section class="headline">
+      <img src={billede} alt="fløjte" />
+    </section>
+    <p class="text">
+      {tekst}
+    </p>
+    <p class="second-text">
+      Vestibulum at lacus lorem. Aenean et consequat velit, vitae aliquet risus.
+      Fusce eleifend lacus interdum, ornare ligula at, molestie justo. Donec
+      eros massa,
+    </p>
+  </article>
+  <img src="../images/blomstergren.png" alt="blomst" id="blomst" />
+</main>
+
+<style>
+  .headline {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headline img {
+    max-width: 80%;
+  }
+
+  img {
+    margin-top: 10%;
+  }
+
+  .text {
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
+  .second-text {
+    max-width: 500px;
+    margin-left: 45%;
+    margin-top: 5%;
+    color: var(--red-dark);
+  }
+
+  #blomst {
+    margin-top: -10%;
+    width: 35%;
+  }
+
+  body {
+    background-color: #e2d5c3;
+  }
+
+  main {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+  }
+</style>
