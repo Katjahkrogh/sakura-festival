@@ -14,8 +14,7 @@ import "../styles/global.css";
   <body>
     <header>
       <div id="nav_header">
-        <h1>22-23. APRIL 2023</h1>
-
+        <div><h3 class="dato">22-23. APRIL 2023</h3></div>
         <div class="hamburger">
           <div>
             <span class="line"></span>
@@ -34,11 +33,7 @@ import "../styles/global.css";
       </div>
       <div id="flex">
         <img src="/public/images/rødring.png" alt="rødring" width="40%" />
-        <img
-          src="/public/images/blomstergren.png"
-          alt="blomstergren"
-          id="blomst"
-        />
+        <img src="/public/images/blomstergren.png" alt="blomstergren" id="blomst" />
         <div id="tekst_forside">
           <h1>SAKURA FESTIVAL</h1>
           <h2 class="celebrate">Celebrate the blooming...</h2>
@@ -58,18 +53,8 @@ import "../styles/global.css";
           <button>Find it here</button>
         </div>
         <div id="program_billeder">
-          <img
-            src="/public/images/flyer.webp"
-            alt="flyer"
-            width="50%"
-            id="flyer"
-          />
-          <img
-            src="/public/images/forside.png"
-            alt="forside"
-            width="25%"
-            id="forside"
-          />
+          <img src="/public/images/flyer.webp" alt="flyer" width="50%" id="flyer" />
+          <img src="/public/images/forside.png" alt="forside" width="25%" id="forside" />
         </div>
       </div>
       <div id="oplev">
@@ -121,6 +106,19 @@ import "../styles/global.css";
       left: 13vw;
       transform: rotate(301deg);
       animation: synlighed 2s ease-in-out;
+    }
+
+    .dato {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      text-align: center;
+      color: var(--beige-dark);
+      background-color: rgb(148, 181, 60, 0.6);
+
+      font-size: 10px;
+      margin: 0.2rem 2rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
     }
 
     @keyframes synlighed {
@@ -628,6 +626,18 @@ import "../styles/global.css";
 
     .hide {
       display: none;
+    }
+
+    @media (min-width: 600px) {
+      .dato {
+        font-size: 16px;
+        margin: 0.5rem 2rem;
+      }
+    }
+    @media (min-width: 900px) {
+      .dato {
+        font-size: 24px;
+      }
     }
   </style>
   <script>
