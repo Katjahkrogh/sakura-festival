@@ -4,12 +4,7 @@ import "../styles/global.css";
 const { title, variant, size, theclass } = Astro.props;
 ---
 
-<button
-  class={theclass}
-  data-day={theclass}
-  data-variant={variant}
-  data-size={size}
->
+<button class={theclass} data-day={theclass} data-variant={variant} data-size={size}>
   {title}
 </button>
 
@@ -50,11 +45,6 @@ const { title, variant, size, theclass } = Astro.props;
   }
 
   /* Variants */
-  [data-variant="program"] {
-    border-radius: 11px;
-    background-color: var(--beige-dark);
-    color: var(--brown);
-  }
 
   [data-variant="download"] {
     border-radius: 11px;
@@ -82,13 +72,6 @@ const { title, variant, size, theclass } = Astro.props;
   @media (min-width: 900px) {
     button {
       font-size: 20px;
-    }
-
-    [data-variant="program"] {
-      width: 262px;
-      border-radius: 11px;
-      background-color: var(--beige-dark);
-      color: var(--brown);
     }
 
     [data-variant="download"] {

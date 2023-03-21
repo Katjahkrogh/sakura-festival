@@ -1,0 +1,82 @@
+---
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Singleview from "../components/Singleview.astro";
+
+import "../styles/global.css";
+
+const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/events";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
+  },
+};
+
+const response = await fetch(url, options);
+const data = await response.json();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Landingpage</title>
+  </head>
+  <body>
+    <h1>komponenter</h1>
+
+    <div class="header">
+      <h2>Header</h2>
+      <Header />
+    </div>
+    <div class="button">
+      <h2>Buttons</h2>
+      <Button title="Saturday" variant="day" size="desktop" theclass="saturday" />
+      <Button title="download" variant="download" size="desktop" theclass="sunday" />
+    </div>
+    <div class="card">
+      <h2>Card</h2>
+      <Card navn="Haiku" billede="../images/aktiviteter/haiku.png" link="#" beskrivelse="..." japansk="俳句" day="saturday" stage="Second stage" />
+    </div>
+    <div class="singleview">
+      <h2>Singleview Card</h2>
+      <Singleview
+        navn="Haiku"
+        billede="../images/aktiviteter/haiku.png"
+        link="#"
+        tekst="Haiku er en form for japansk poesi, der normalt består af tre linjer. Den første og tredje linje har normalt fem stavelser, mens den anden linje har syv stavelser. Haiku fokuserer ofte på natur, årstider og øjeblikke i hverdagen.Traditionelt set anvendes haiku ofte til at udtrykke en følelse af øjeblikkelig erkendelse eller oplysning, som kan opstå i løbet af en enkelt observation af naturen eller livet omkring os."
+        japansk="俳句"
+        day="saturday"
+        stage="Second stage"
+      />
+    </div>
+
+    <div class="footer">
+      <h2>Footer</h2>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: var(--beige-light);
+  }
+  div {
+    margin: 50px 0;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+  h2 {
+    text-align: center;
+    background-color: rgb(129, 180, 129);
+    text-transform: uppercase;
+  }
+</style>
