@@ -34,7 +34,11 @@ import "../styles/global.css";
       </div>
       <div id="flex">
         <img src="/public/images/rødring.png" alt="rødring" width="40%" />
-        <img src="/public/images/blomstergren.png" alt="blomstergren" id="blomst" />
+        <img
+          src="/public/images/blomstergren.png"
+          alt="blomstergren"
+          id="blomst"
+        />
         <div id="tekst_forside">
           <h1>SAKURA FESTIVAL</h1>
           <h2 class="celebrate">Celebrate the blooming...</h2>
@@ -54,8 +58,18 @@ import "../styles/global.css";
           <button>Find it here</button>
         </div>
         <div id="program_billeder">
-          <img src="/public/images/flyer.webp" alt="flyer" width="50%" />
-          <img src="/public/images/forside.png" alt="forside" width="25%" id="forside" />
+          <img
+            src="/public/images/flyer.webp"
+            alt="flyer"
+            width="50%"
+            id="flyer"
+          />
+          <img
+            src="/public/images/forside.png"
+            alt="forside"
+            width="25%"
+            id="forside"
+          />
         </div>
       </div>
       <div id="oplev">
@@ -171,6 +185,7 @@ import "../styles/global.css";
       left: 59vw;
       top: 71vw;
     }
+
     #program_billeder {
       margin-top: 3em;
     }
@@ -196,7 +211,6 @@ import "../styles/global.css";
       display: flex;
       align-items: end;
       padding-left: 15vw;
-      z-index: 2;
     }
 
     header {
@@ -271,6 +285,7 @@ import "../styles/global.css";
       padding: 1em;
       height: fit-content;
       background-color: var(--beige-medium);
+      cursor: pointer;
     }
 
     html {
@@ -610,6 +625,10 @@ import "../styles/global.css";
     iframe {
       z-index: 2;
     }
+
+    .hide {
+      display: none;
+    }
   </style>
   <script>
     window.onload = function () {
@@ -617,9 +636,12 @@ import "../styles/global.css";
 
       const mobile_menu = document.querySelector(".menu");
 
+      const pil = document.querySelector(".pil");
+
       menu_btn.addEventListener("click", function () {
         menu_btn.classList.toggle("isactive");
         mobile_menu.classList.toggle("isactive");
+        pil.classList.toggle("hide");
       });
     };
   </script>
