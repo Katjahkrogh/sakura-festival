@@ -22,12 +22,13 @@ import "../styles/global.css";
             <span class="line"></span>
           </div>
         </div>
+
         <div class="hejhej">
           <nav class="menu">
-            <a href="/pages/program-liste.astro">Program</a>
-            <a href="#">Boder</a>
-            <a href="#">Tilmedning af boder, frivillige eller akiviteter</a>
-            <a href="/pages/about.astro">Om os</a>
+            <a href="program-liste">Program</a>
+            <a href="#">Shops</a>
+            <a href="#">Sign up to become a volunteer, shops or activities</a>
+            <a href="about">About us</a>
           </nav>
         </div>
       </div>
@@ -39,10 +40,10 @@ import "../styles/global.css";
           <h2 class="celebrate">Celebrate the blooming...</h2>
           <div id="tekstpil">
             <h2>開花を祝う</h2>
-            <div>
-              <a href="#program" class="pil">&#8595;</a>
-            </div>
           </div>
+        </div>
+        <div id="pilcontainer">
+          <h2><a href="#program" class="pil">&#8595;</a></h2>
         </div>
       </div>
     </header>
@@ -126,9 +127,40 @@ import "../styles/global.css";
       }
     }
 
-    .pil {
-      transition: 0.2s;
+    @keyframes hopper {
+      10% {
+        translate: 0 2%;
+      }
+      20% {
+        translate: 0 6%;
+      }
+      50% {
+        translate: 0 10%;
+      }
+      100% {
+        translate: 0 14%;
+      }
     }
+    @keyframes jump {
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(0, 0, 0);
+      }
+      0% {
+        transform: translate3d(0, -15%, 0);
+      }
+    }
+    .pil {
+      transform-origin: 50% 50%;
+      animation: jump 0.7s linear alternate infinite;
+    }
+
+    /* .pil {
+      transition: 1s;
+      animation: jump;
+    } */
     #tekstpil {
       display: flex;
       justify-content: space-between;
@@ -154,12 +186,17 @@ import "../styles/global.css";
       font-size: 6vw;
       display: flex;
       justify-content: flex-end;
-      padding-right: 1em;
       font-weight: bolder;
     }
     .pil:hover {
       color: var(--red-medium);
       transition: 0.2s;
+    }
+    #pilcontainer {
+      display: flex;
+      align-items: end;
+      padding-left: 15vw;
+      z-index: 2;
     }
 
     header {
@@ -198,15 +235,17 @@ import "../styles/global.css";
     }
     #tekst_forside h2 {
       color: var(--beige-dark);
-      font-size: 3.2vw;
+      font-size: 3vw;
+      font-weight: 400;
     }
 
     #nav_header h1 {
       color: #e2d5c3;
       font-family: "Poppins", sans-serif;
       margin-right: 1em;
-      font-size: 3vw;
+      font-size: 2.5vw;
       margin-top: 18px;
+      font-weight: 500;
     }
 
     #nav_header {
@@ -296,7 +335,7 @@ import "../styles/global.css";
     }
 
     @media (max-width: 960px) {
-      #baggrund_headerimg {
+      #baggrund_header img {
         margin-bottom: 3em;
       }
     }
@@ -377,12 +416,12 @@ import "../styles/global.css";
       #program button {
         background-color: var(--red-medium);
         padding: 1em;
-        width: 26vw;
+        width: 22vw;
         border: none;
         border-radius: 1em;
         color: white;
         font-family: "Poppins";
-        font-size: 2.4vw;
+        font-size: 2.2vw;
       }
 
       #program h2 {
@@ -390,6 +429,10 @@ import "../styles/global.css";
       }
       #youtube img {
         opacity: 0;
+      }
+      iframe {
+        width: 90%;
+        height: 100%;
       }
     }
 
@@ -399,7 +442,7 @@ import "../styles/global.css";
         grid-template-columns: 1fr 1fr;
         align-content: space-evenly;
         background-color: var(--beige-dark);
-        height: 60vw;
+        height: 65vw;
         padding-left: 4em;
       }
       #program button {
@@ -409,8 +452,8 @@ import "../styles/global.css";
         border-radius: 1em;
         color: white;
         font-family: "Poppins";
-        font-size: 2vw;
-        width: 24vw;
+        font-size: 1.2vw;
+        width: 15vw;
       }
       #program h2 {
         letter-spacing: 0.3vw;
@@ -456,7 +499,7 @@ import "../styles/global.css";
       font-size: 3vw;
       margin-top: 1em;
       margin-bottom: 1em;
-      letter-spacing: 0.2vw;
+      letter-spacing: 0.4vw;
     }
 
     .box_lang:hover {
@@ -536,7 +579,7 @@ import "../styles/global.css";
 
     .boxes:hover {
       cursor: pointer;
-      opacity: 0.7;
+      /* opacity: 0.7; */
       width: 28.1vw;
     }
 
@@ -575,7 +618,7 @@ import "../styles/global.css";
     #youtube img {
       position: absolute;
       width: 78vw;
-      top: 170vw;
+      top: 177vw;
     }
 
     iframe {
