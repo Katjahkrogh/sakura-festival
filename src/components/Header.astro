@@ -53,6 +53,7 @@ const { title, title2 } = Astro.props;
     height: fit-content;
     width: 100%;
     padding: 0 0 5vh;
+    overflow: hidden;
   }
   h1 {
     font-family: "Poppins", sans-serif;
@@ -104,10 +105,12 @@ const { title, title2 } = Astro.props;
   #baggrund_header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
   #nav_header {
     display: flex;
     padding: 1em;
+    align-items: center;
   }
   .menu {
     display: block;
@@ -144,29 +147,26 @@ const { title, title2 } = Astro.props;
     background-color: var(--beige-dark);
   }
 
-  .hamburger,
+  /* .hamburger, */
   .hamburger:after,
   .hamburger:before {
     height: 0.4vw;
     background-color: var(--beige-dark);
-    margin: 0 0 1vw 0px;
     transition: 0.4s;
     content: "";
     display: block;
     overflow: initial;
+    margin: 1vw 0px;
   }
   .hamburger {
     position: relative;
-    display: block;
     width: 3.5vw;
     cursor: pointer;
     appearance: none;
     background: none;
     outline: none;
     border: none;
-    align-self: self-start;
-    margin-top: 2vw;
-    height: 20px;
+    display: block;
   }
 
   .blomst {
