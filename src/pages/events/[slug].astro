@@ -31,7 +31,7 @@ const { event } = Astro.props;
   <body>
     <Header title={event.event} title2={event.japapansk_tegn} />
     <main>
-      <Singleview tekst={event.beskrivelse} billede={`../images/aktiviteter/${event.billede}`} />
+      <Singleview tekst={event.beskrivelse} billede={`../../../images/aktiviteter/${event.billede}`} />
     </main>
     <Footer />
   </body>
