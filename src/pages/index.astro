@@ -34,12 +34,16 @@ import "../styles/global.css";
       </div>
       <div id="flex">
         <img src="/public/images/rødring.png" alt="rødring" width="40%" />
-        <img src="/public/images/blomstergren.png" alt="blomstergren" id="blomst" />
+        <img
+          src="/public/images/blomstergren.png"
+          alt="blomstergren"
+          id="blomst"
+        />
         <div id="tekst_forside">
           <h1>SAKURA FESTIVAL</h1>
           <h2 class="celebrate">Celebrate the blooming...</h2>
           <div id="tekstpil">
-            <h2>開花を祝う</h2>
+            <h2 class="japansk1">開花を祝う</h2>
           </div>
         </div>
         <div id="pilcontainer">
@@ -54,8 +58,18 @@ import "../styles/global.css";
           <button>Find it here</button>
         </div>
         <div id="program_billeder">
-          <img src="/public/images/flyer.webp" alt="flyer" width="50%" id="flyer" />
-          <img src="/public/images/forside.png" alt="forside" width="25%" id="forside" />
+          <img
+            src="/public/images/flyer.webp"
+            alt="flyer"
+            width="50%"
+            id="flyer"
+          />
+          <img
+            src="/public/images/forside.png"
+            alt="forside"
+            width="25%"
+            id="forside"
+          />
         </div>
       </div>
       <div id="oplev">
@@ -173,7 +187,9 @@ import "../styles/global.css";
     #tekstpil {
       display: flex;
       justify-content: space-between;
+      color: #94b53c;
     }
+
     /**/
     #forside {
       position: absolute;
@@ -238,7 +254,7 @@ import "../styles/global.css";
       position: absolute;
       letter-spacing: 0.5vw;
       z-index: 1;
-      top: 16vw;
+      top: 19vw;
       left: 33vw;
       font-size: 7vw;
     }
@@ -246,6 +262,12 @@ import "../styles/global.css";
       color: var(--beige-dark);
       font-size: 3vw;
       font-weight: 400;
+    }
+
+    #tekst_forside .japansk1 {
+      color: #94b53c;
+      font-size: 2.3vw;
+      margin-top: -6%;
     }
 
     #nav_header h1 {
@@ -418,7 +440,7 @@ import "../styles/global.css";
         position: absolute;
         letter-spacing: 0.5vw;
         z-index: 1;
-        top: 22vw;
+        top: 26vw;
         left: 33vw;
         font-size: 7vw;
       }
