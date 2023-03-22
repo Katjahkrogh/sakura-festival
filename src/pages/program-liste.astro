@@ -33,7 +33,7 @@ const data = await response.json();
         <Button title="All" variant="day" size="desktop" theclass="all" class="active" />
       </section>
       <section class="card_grid">
-        {data.map((event) => <Card navn={event.event} billede={`../images/aktiviteter/${event.billede}`} link={"/events/" + event.id} beskrivelse={event.beskrivelse} japansk={event.japapansk_tegn} day={event.day} stage={event.location} />)}
+        {data.map((event) => <Card navn={event.event} billede={`../../images/aktiviteter/${event.billede}`} link={"/events/" + event.id} beskrivelse={event.beskrivelse} japansk={event.japapansk_tegn} day={event.day} stage={event.location} />)}
       </section>
     </main>
     <Footer />
