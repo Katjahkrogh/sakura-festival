@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "moykoregular";
+  src: url("../../public/font/moyko-webfont.woff2") format("woff2"),
+    url("../../public/font/moyko-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --black: #000000;
   --brown: #5f2a0d;
