@@ -5,7 +5,7 @@ const { title, title2 } = Astro.props;
 <body>
   <header>
     <div id="baggrund_header">
-      <a href="../">
+      <a href="../" class="logo-link">
         <img src="/public/images/sakura-festival.png" alt="logo" width="20%" class="logo" />
       </a>
       <div id="nav_header">
@@ -82,11 +82,14 @@ const { title, title2 } = Astro.props;
     border-radius: 50px;
   }
 
-  #baggrund_header a {
+  .logo-link {
     width: 20vw;
   }
   .logo {
     width: 100%;
+  }
+  .logo-link:hover {
+    opacity: 80%;
   }
 
   #baggrund_header h1 {
