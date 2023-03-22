@@ -21,7 +21,8 @@ import "../styles/global.css";
             <span class="line"></span>
           </div>
         </div>
-
+      </div>
+      <div>
         <div class="hejhej">
           <nav class="menu">
             <a href="program-liste">Program</a>
@@ -169,10 +170,6 @@ import "../styles/global.css";
       animation: jump 0.7s linear alternate infinite;
     }
 
-    /* .pil {
-      transition: 1s;
-      animation: jump;
-    } */
     #tekstpil {
       display: flex;
       justify-content: space-between;
@@ -268,6 +265,7 @@ import "../styles/global.css";
     #nav_header {
       display: flex;
       padding: 1em;
+      align-items: center;
     }
     .menu {
       display: block;
@@ -305,33 +303,25 @@ import "../styles/global.css";
       background-color: var(--beige-dark);
     }
 
-    .menu a:hover {
-      background-color: var(--beige-dark);
-    }
-
-    .hamburger,
     .hamburger:after,
     .hamburger:before {
       height: 0.4vw;
       background-color: var(--beige-dark);
-      margin: 6px 0px;
       transition: 0.4s;
       content: "";
       display: block;
       overflow: initial;
+      margin: 1vw 0px;
     }
     .hamburger {
       position: relative;
-      display: block;
       width: 3.5vw;
       cursor: pointer;
       appearance: none;
       background: none;
       outline: none;
       border: none;
-      align-self: self-start;
-      margin-top: 2vw;
-      height: 20px;
+      display: block;
     }
     @media (max-width: 960px) {
       #baggrund_header img {
@@ -350,14 +340,13 @@ import "../styles/global.css";
         display: none;
       }
 
-      #oplev{
+      #oplev {
         max-height: 30vh;
       }
     }
 
     @media (max-width: 900px) {
-
-      #oplev{
+      #oplev {
         max-height: 80vh;
       }
     }
