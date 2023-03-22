@@ -55,7 +55,12 @@ import "../styles/global.css";
         </div>
         <div id="program_billeder">
           <img src="..//images/flyer.webp" alt="flyer" width="50%" id="flyer" />
-          <img src="..//images/forside.png" alt="forside" width="25%" id="forside" />
+          <img
+            src="..//images/forside.png"
+            alt="forside"
+            width="25%"
+            id="forside"
+          />
         </div>
       </div>
       <div id="oplev">
@@ -87,8 +92,6 @@ import "../styles/global.css";
         <img src="../images/roedeprikker.png" alt="roedeprikker" />
         <h2>Last years festival</h2>
         <iframe
-          width="560"
-          height="315"
           src="https://www.youtube.com/embed/vZGJPqfaOEA"
           title="YouTube video player"
           frameborder="0"
@@ -359,6 +362,9 @@ import "../styles/global.css";
       #oplev {
         max-height: 80vh;
       }
+      #youtube {
+        max-height: 60vh;
+      }
     }
 
     /*program */
@@ -448,12 +454,12 @@ import "../styles/global.css";
         opacity: 0;
       }
       iframe {
-        width: 100%;
-        height: 50%;
+        aspect-ratio: 560/315;
+        width: 65%;
       }
 
       #youtube {
-        max-height: 70vh;
+        max-height: 40vh;
       }
 
       #oplev {
@@ -660,6 +666,9 @@ import "../styles/global.css";
 
     iframe {
       z-index: 2;
+      aspect-ratio: 560/315;
+      width: 65%;
+      margin-top: -3%;
     }
 
     .hide {
