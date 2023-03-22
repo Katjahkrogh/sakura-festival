@@ -6,7 +6,7 @@ import "../styles/global.css";
 <html lang="da">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="../images/SakuraCPH-logo.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Landingpage</title>
@@ -239,7 +239,7 @@ import "../styles/global.css";
 
     #tekst_forside h1 {
       color: var(--beige-dark);
-      font-family: Moyko;
+      font-family: "moykoregular";
       position: absolute;
       letter-spacing: 0.5vw;
       z-index: 1;
@@ -341,9 +341,27 @@ import "../styles/global.css";
       }
     }
 
-    @font-face {
-      font-family: "Moyko";
-      src: "../public/font/Moyko.ttf";
+    @media (min-width: 300px) {
+      #program h2 {
+        margin-top: -22%;
+      }
+    }
+
+    @media (max-width: 900px) {
+      #youtube img {
+        display: none;
+      }
+
+      #oplev{
+        max-height: 30vh;
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      #oplev{
+        max-height: 80vh;
+      }
     }
 
     /*program */
@@ -354,8 +372,8 @@ import "../styles/global.css";
         flex-direction: column;
         justify-content: flex-start;
         background-color: var(--beige-dark);
-        height: 100vw;
-        padding-top: 2em;
+        height: 60vh;
+        margin-top: 10%;
       }
       #program_div img {
         width: 30%;
@@ -363,11 +381,11 @@ import "../styles/global.css";
 
       #program_billeder {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
       }
       #forside {
         left: 41vw;
-        top: 111vw;
+        top: 105vw;
       }
       #program {
         margin-top: 3vw;
@@ -376,6 +394,7 @@ import "../styles/global.css";
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 20vh;
       }
       #program h2 {
         gap: 3vw;
@@ -406,7 +425,7 @@ import "../styles/global.css";
       }
       #tekst_forside h1 {
         color: var(--beige-dark);
-        font-family: Moyko;
+        font-family: "moykoregular";
         position: absolute;
         letter-spacing: 0.5vw;
         z-index: 1;
@@ -432,8 +451,24 @@ import "../styles/global.css";
         opacity: 0;
       }
       iframe {
-        width: 90%;
-        height: 100%;
+        width: 100%;
+        height: 50%;
+      }
+
+      #youtube {
+        max-height: 70vh;
+      }
+
+      #oplev {
+        max-height: 50vh;
+      }
+
+      #oplev h2 {
+        margin-top: 5%;
+      }
+
+      header {
+        height: 40vh;
       }
     }
 
@@ -444,7 +479,7 @@ import "../styles/global.css";
         align-content: space-evenly;
         background-color: var(--beige-dark);
         height: 65vw;
-        padding-left: 4em;
+        padding-left: 2em;
       }
       #program button {
         background-color: var(--red-medium);
@@ -494,12 +529,13 @@ import "../styles/global.css";
     /*oplev */
     #oplev {
       background-color: white;
+      height: 120vh;
     }
     #oplev h2 {
       text-align: center;
       font-size: 3vw;
-      margin-top: 1em;
-      margin-bottom: 1em;
+      padding-top: 2em;
+      margin-bottom: 2em;
       letter-spacing: 0.4vw;
     }
 
@@ -607,6 +643,7 @@ import "../styles/global.css";
       gap: 4em;
       padding: 6vw;
       background-color: var(--pink-medium);
+      height: 80vh;
     }
 
     #youtube h2 {
@@ -619,7 +656,8 @@ import "../styles/global.css";
     #youtube img {
       position: absolute;
       width: 78vw;
-      top: 177vw;
+      top: 185 vw;
+      left: 12vw;
     }
 
     iframe {
