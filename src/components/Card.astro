@@ -6,7 +6,7 @@ const { navn, billede, link, stage, japansk, day } = Astro.props;
 ---
 
 <article class={"theCard " + day}>
-  <a href={link} target="blank"
+  <a href={link}
     ><div class="img_container">
       <img src={billede} alt="billede" />
       <p>{stage}</p>

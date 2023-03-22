@@ -5,6 +5,9 @@ const { tekst, billede } = Astro.props;
 ---
 
 <main>
+  <div id="pilcontainer">
+    <p><a href="../program-liste" class="pil">&#8592</a></p>
+  </div>
   <article>
     <section class="headline">
       <img src={billede} alt="fløjte" />
@@ -12,16 +15,29 @@ const { tekst, billede } = Astro.props;
     <p class="text">
       {tekst}
     </p>
-    <p class="second-text">
-      Vestibulum at lacus lorem. Aenean et consequat velit, vitae aliquet risus.
-      Fusce eleifend lacus interdum, ornare ligula at, molestie justo. Donec
-      eros massa,
-    </p>
+    <p class="second-text">Vestibulum at lacus lorem. Aenean et consequat velit, vitae aliquet risus. Fusce eleifend lacus interdum, ornare ligula at, molestie justo. Donec eros massa,</p>
   </article>
   <img src="../images/blomstergren.png" alt="blomst" id="blomst" />
 </main>
 
 <style>
+  .pil {
+    color: var(--red-medium);
+    font-size: 6vw;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bolder;
+    padding: 2vw 0;
+  }
+  .pil:hover {
+    color: var(--red-dark);
+    transition: 0.2s;
+  }
+
+  #pilcontainer {
+    height: fit-content;
+  }
+
   .headline {
     justify-content: center;
     align-items: center;
@@ -33,12 +49,12 @@ const { tekst, billede } = Astro.props;
   }
 
   img {
-    margin-top: 10%;
+    margin-top: 4%;
   }
 
   .text {
     margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 4%;
   }
 
   .second-text {
